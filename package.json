@@ -1,0 +1,38 @@
+{
+  "name": "UntitledCompany",
+  "version": "0.0.0",
+  "description": "This is a test",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.8.6",
+    "gulp-autoprefixer": "^0.0.8",
+    "gulp-ruby-sass": "^0.6.0",
+    "gulp-sass": "^0.7.2",
+    "wiredep": "^1.8.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-autoprefixer": "0.0.8",
+    "gulp-clean": "^0.3.1",
+    "gulp-compass": "^2.0.1",
+    "gulp-concat": "^2.4.1",
+    "gulp-imagemin": "^2.0.0",
+    "gulp-livereload": "^2.1.1",
+    "gulp-minify-css": "^0.3.11",
+    "gulp-notify": "^2.0.1",
+    "gulp-rename": "^1.2.0",
+    "gulp-uglify": "^1.0.1"
+  },
+  "scripts": {
+    "test": "none"
+  },
+  "repository": {
+    "type": "git",
+    "url": "jolangreen"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Jolan Green",
+  "license": "ISC"
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <title>Code Snipp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body ng-app="myApp" ng-controller="BaseController" ng-class="pageClass('')">
+<header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-collapse collapse pull-right">
+                <ul id="menu-header-menu" class="nav navbar-nav">
+                    <li ng-class="menuClass('')"><a href="#/">Home</a></li>
+                    <li ng-class="menuClass('phpcode')"><a href="#/phpcode">PHP Code</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<div class="main-header container text-center">
+    <h1>Code Snipp <small>- Jolan Green</small></h1>
+    <button id="target-to-copy" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text" data-clipboard-text="Default clipboard">Copy HTML</button>
+    <button id="target-to-copy-css" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css" data-clipboard-text="Default clipboard">Copy CSS Layout</button>
+    <button id="target-to-copy-css2" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css2" data-clipboard-text="Default clipboard">Copy CSS Page Elements</button>
+</div>
+
+<!-- Main Content
+================================================== -->
+<div ng-view id="main">
+    <!-- Our views (pages) will be shown inside the ng-view tag -->
+</div>
+<div class="clear"></div>
+
+
+
+
+<script src="assets/js/scripts.js"></script>
+
+<script src="assets/js/ZeroClipboard.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf"></script>
+
+<script>
+    $(document).ready(function() {
+        var clientTarget = new ZeroClipboard($("#target-to-copy, #target-to-copy-css, #target-to-copy-css2"), {
+            moviePath: "assets/js/ZeroClipboard.swf",
+            debug: false
+        });
+    });
+
+
+
+    var counter = 0;
+    var row = '</div><div class="row">'
+    if(counter % 3 == 0) {
+        '</div><div class="row">'
+        counter++
+    };
+
+</script>
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</body>
+</html>

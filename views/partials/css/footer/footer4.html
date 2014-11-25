@@ -1,0 +1,53 @@
+<xmp>
+footer
+    background: $clrDark
+    padding-top: 20px
+    font-size: 13px
+
+    hr
+        border-bottom: 1px solid $clrMedium
+        margin: 5px 0
+
+    .container .row
+        padding: 15px 0
+
+        h4
+            font-size: 15px
+            color: $clrBrightest
+            text-transform: uppercase
+
+        ul
+            padding-left: 0
+            padding-top: 5px
+
+            li
+                list-style: none
+                &:before
+                    font-family: 'FontAwesome'
+                    content: '\f0da'
+                    margin-right: 4px
+        a
+            color: $clrText
+
+            &:hover
+                color: $clrSecondary
+                text-decoration: none
+
+        .contact-info
+            padding-left: 20px
+            i.fa
+                margin-left: -20px
+                float: left
+                margin-top: 3px
+
+        form input[type="text"]
+            height: 34px
+
+
+@media (max-width: 767px)
+    footer .container
+        text-align: center
+
+        .pull-right
+            float: none !important
+</xmp>

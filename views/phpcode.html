@@ -1,0 +1,115 @@
+<section>
+  <div class="container" ng-controller="PhpController">
+    <h1>PHP Code</h1>
+
+<accordion close-others="oneAtATime">
+
+<accordion-group heading="Category Display">
+<xmp><?php the_category(', ') ?></xmp>
+</accordion-group>
+
+<accordion-group heading="Date Format">
+<xmp><?php the_time('m/d/Y') ?></xmp>
+</accordion-group>
+
+<accordion-group heading="If Page">
+<xmp><?php if(is_page('home')){ ?>
+<?php } elseif(is_page('services') OR $post->post_parent == '14' ): { ?>
+<?php } else { ?>
+<?php } ?></xmp>
+</accordion-group>
+
+<accordion-group heading="Link - Absolute URL">
+<xmp><?php echo home_url( '/' ); ?></xmp>
+</accordion-group>
+
+<accordion-group heading="Link - Template folder">
+<xmp><?php bloginfo('template_directory'); ?>/</xmp>
+</accordion-group>
+
+<accordion-group heading="Paragraph - Echo character limited content">
+<xmp><?php echo substr($post->post_content, 0, 100) ?>...</xmp>
+</accordion-group>
+
+<accordion-group heading="Parent Page Title">
+<xmp><h1>
+    <?php
+    $parent_title = get_the_title($post->post_parent);
+    echo $parent_title;
+    ?>
+</h1></xmp>
+</accordion-group>
+
+<accordion-group heading="Post Thumbnail">
+<xmp><?php the_post_thumbnail('large-thumb'); ?></xmp>
+</accordion-group>
+
+<accordion-group heading="Repeat 'row' class after every 3">
+<xmp><div class="row">
+    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+      <article class="col-md-4">
+      <!-- loop content -->
+      </article>
+    <?php $counter++;
+      if ($counter % 3 == 0) {
+      echo '</div><div class="row">';
+    }
+    endwhile; endif; ?>
+</div><!-- /row --></xmp>
+</accordion-group>
+
+<accordion-group heading="Sidebar Submenu Children">
+<xmp><?php
+      //Sidebar Automatic Sub Menu
+      //This code will not work if placed after a widget block in the sidebar.
+      if($post->post_parent)
+      $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0");
+      else
+      $children = wp_list_pages("title_li=&child_of=".$post->ID."&echo=0");
+      if ($children) { ?>
+      <ul>
+      <?php echo $children; ?>
+      </ul>
+<?php } ?></xmp>
+</accordion-group>
+
+<accordion-group heading="Sidebar - List current page children">
+<xmp><?php global $post; $thispage = $post->ID; // grabs the current post id from global and then assigns it to thispage ?>
+        <?php $pagekids = get_pages("child_of=".$thispage."&sort_column=menu_order"); // gets a list of pages that are sub pages of the current page and assigns then to pagekids ?>
+        <?php if ($pagekids) { // if there are any values stored in pagekids and therefore the current page has subpages ?>
+          <ul>
+            <?php wp_list_pages("depth=1&title_li=&sort_column=menu_order&child_of=".$thispage); // display the sub pages of the current page only ?>
+            </ul>
+        <?php } elseif($post->post_parent)
+        $children = wp_list_pages("title_li=&child_of=".$post->post_parent."&echo=0"); if ($children) { // if there are no sub pages for the current page ?>
+  <ul>
+  <?php echo $children; ?>
+  </ul>
+<?php } ?></xmp>
+</accordion-group>
+
+<accordion-group heading="Tags Display">
+<xmp><?php the_tags('<span>Tags: </span>') ?></xmp>
+</accordion-group>
+
+
+<accordion-group heading="Query Post">
+<xmp><?php
+$args = array( 'post_type' => 'banner', 'posts_per_page' => 3 );
+$loop = new WP_Query( $args );
+while ( $loop->have_posts() ) : $loop->the_post(); ?>
+	<!-- content -->
+<?php endwhile; ?></xmp>
+</accordion-group>
+
+<accordion-group heading="WP nav menu">
+<xmp><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+<?php wp_nav_menu( array('menu' => 'footer', 'after' => '' )); ?></xmp>
+</accordion-group>
+
+
+</accordion>
+
+
+  </div>
+</section>

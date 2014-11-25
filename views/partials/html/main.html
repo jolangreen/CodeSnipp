@@ -1,0 +1,51 @@
+<xmp>
+<!doctype html>
+<html lang="en-US">
+
+<head>
+<meta charset="UTF-8" />
+<link rel="icon" href="favicon.ico" type="image/x-icon" />
+<title>UntitledCompany</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
+
+<link rel="stylesheet" href="assets/css/bootstrap.css" />
+<link rel="stylesheet" href="assets/css/font-awesome.css" />
+
+<link href="style.css" rel="stylesheet" type="text/css" data-skrollr-stylesheet />
+
+</head>
+
+<body class="home">
+
+<!-- Header
+================================================== -->
+</xmp><div ng-include="selected.header.html"></div><xmp>
+
+<main id="main">
+<!-- Banner
+================================================== -->
+</xmp><div ng-include="selected.banner.html"></div><xmp>
+
+<!-- Main Content
+================================================== -->
+
+</xmp><div ng-include="selected.cta.html"></div><xmp>
+
+</xmp><div ng-include="selected.body.html"></div><xmp>
+
+</main>
+<div class="clear"></div>
+
+<!-- Footer ================================================== -->
+</xmp><div ng-include="selected.footer.html"></div><xmp>
+
+<script src="assets/js/scripts.js"></script>
+<script src="bower_components/jquery/dist/jquery.min.map"></script>
+<script type="text/javascript">
+    var s = skrollr.init();
+</script>
+<!-- LiveReload -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
+</xmp>

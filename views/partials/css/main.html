@@ -1,0 +1,165 @@
+<xmp>
+/* ==========================================================================
+   Global
+   ========================================================================== */
+body
+    background: $clrBackground
+    padding: 0px
+    font-family: $fontPrimary
+    color: $clrText
+    font-size: 14px
+
+a, a:visited
+    color: $clrPrimary
+    text-decoration: none
+    +transition(all 0.2s ease-in-out)
+
+a:hover, a:focus, a:active
+    color: $clrSecondary
+    text-decoration: none
+
+hr
+    margin: 15px 0
+    border: 0
+    border-bottom: 1px solid $clrBright
+
+.img-fit img
+    width: 100%
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.home header
+    background: transparent
+</xmp><div ng-include="selected.header.css"></div><xmp>
+
+        //Sub-Menu --
+        .menu-toggle
+            display: none
+
+        .sub-menu
+            top: 30px
+
+        .sub-menu,
+        .children
+            background-color: $clrBright
+            border-top: 0
+            display: none
+            padding: 0
+            position: absolute
+            left: -2px
+            z-index: 3000
+            list-style: none
+            li
+                padding: 6px 5px
+                text-align: center
+                +border(bottom, #555)
+                background: $clrDark
+                a
+                    color: $clrBrightest
+                    margin: 0
+                    display: block
+                    min-width: 200px
+                    text-decoration: none
+
+                &:hover
+                    background: $clrSecondary
+                    color: $clrBrightest
+                    a
+                        color: $clrBrightest
+
+
+            .sub-menu ul,
+            .children ul
+                border-left: 0
+                left: 100%
+                top: 0px
+
+            //HOVER ACTIVATION
+            li:hover > ul, li:hover > ul
+                display: block
+
+/* ==========================================================================
+   Banner
+   ========================================================================== */
+</xmp><div ng-include="selected.banner.css"></div><xmp>
+
+
+/* Page Heading */
+.page-intro
+    background: image-url("headers/banner1.jpg")
+    background-size: cover
+    color: $clrBrightest
+
+    .tint
+        padding: 30px 0
+        position: relative
+
+    .col-md-6:last-child
+        text-align: right
+
+    .col-md-6 a, .page-intro .col-md-6 h1
+        color: $clrBrightest
+
+    .col-md-6 h1
+        margin-bottom: 0
+
+.breadcrumb
+    background: transparent
+    line-height: 40px
+    margin-bottom: 0
+
+
+
+/* ==========================================================================
+   Main Body, Content Area
+   ========================================================================== */
+#main section
+    padding: 80px 0
+
+
+.main-body
+    padding: 40px 0
+// .primary, .secondary
+
+.secondary
+    aside
+        margin-bottom: 30px
+    h3
+        color: $clrText
+        margin-bottom: 5px
+    ul
+        padding-left: 0
+        margin-left: 0
+        margin-bottom: 35px
+    ul li
+        list-style: none
+        border-bottom: 1px solid $clrBright
+        line-height: 40px
+        margin-bottom: 0
+        a
+            color: $clrText
+            &:hover
+                color: $clrPrimary
+                text-decoration: none
+
+        &.current_page_item > a,
+        &.current_page_ancestor > a,
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a
+            color: $clrPrimary
+
+        ul ul li
+            border-bottom: none
+            line-height: 30px
+            padding-left: 20px
+
+    // li:before
+    //     font-family: 'FontAwesome'
+    //     content: '\f105'
+    //     margin: 0 10px 0 -15px
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+</xmp><div ng-include="selected.footer.css"></div>

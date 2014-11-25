@@ -1,0 +1,57 @@
+
+$clrBackground: #FFF;
+
+$clrPrimary: #1FAE4B;
+$clrSecondary: #4ec0c1;
+
+$clrText: #8c989e;
+
+$fontPrimary: 'robotoregular', Arial, Helvetica, Sans-serif;
+$fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
+
+@mixin position($top, $right, $bottom, $left, $pos: absolute) {
+    position: $pos;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+//+position(10px, 0, 0, 2px)
+
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin border($side, $color) {
+    border-#{$side}: 1px solid $color;
+}
+
+//Page Code
+#main {
+    padding-bottom: 50px;
+}
+
+.main-header {
+    padding-bottom: 40px;
+}
+
+.tab-content img {
+	width: 100%;
+}
+.tab-content .tab-pane > .row {
+	padding-top: 50px;
+}
+.tab-content .col-md-4 {
+	text-align: center;
+    padding: 10px;
+}
+
+.tab-content .col-md-4.active {
+    background: #C3F9B4;
+    border-radius: 4px;
+    transition: (all 0.3s ease-in-out);
+}
+
+
+@import "compass/css3";
