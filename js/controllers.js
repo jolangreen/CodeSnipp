@@ -173,25 +173,25 @@ myApp.controller('HTMLController', function ($scope, $modal, $log) {
 
 //Select Items
 $scope.selected = {};
-/*
+
 $scope.selected.bodyitems = [
 
 ];
-*/
 
-$scope.select = function(item, type) {
+/**/
+/*$scope.select = function(item, type) {
     $scope.selected[type]=item;
     console.log($scope.selected);
 };
-/*
+*/
 $scope.select = function(item, type) {
-    if(type = 'bodyitems') {
+    if(type = 'body') {
       $scope.selected.bodyitems.push(item);
     } else {
       $scope.selected[type]=item;
     };
     console.log($scope.selected);
-};*/
+};/**/
 
 });
 

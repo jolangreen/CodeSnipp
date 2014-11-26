@@ -2,7 +2,7 @@
 
 .main-header { padding-bottom: 40px; }
 
-.tab-content img { width: 100%; border: 1px solid #ccc; }
+.tab-content img { width: 100%; }
 
 .tab-content .tab-pane > .row { padding-top: 50px; }
 
