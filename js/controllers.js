@@ -171,29 +171,48 @@ myApp.controller('HTMLController', function ($scope, $modal, $log) {
         },
     ];
 
-//Select Items
-$scope.selected = {};
 
-$scope.selected.bodyitems = [
+    //Select Items
+    $scope.selected = {};
 
-];
-
-/**/
-/*$scope.select = function(item, type) {
-    $scope.selected[type]=item;
-    console.log($scope.selected);
-};
-*/
-$scope.select = function(item, type) {
-    if(type = 'body') {
-      $scope.selected.bodyitems.push(item);
-    } else {
-      $scope.selected[type]=item;
+    $scope.select = function(item, type) {
+        $scope.selected[type]=item;
+        console.log($scope.selected);
     };
-    console.log($scope.selected);
-};/**/
+
+
+
+
+    $scope.selected.bodyitemx = [ ];
+
+    $scope.selectnew = function(item, index) {
+        //var nums = $scope.selected.bodyitemx.length;
+
+        $scope.selected.bodyitemx.push(item);
+        //$scope.selected.bodyitemx=item;
+        
+        // for (var i = 0; i < $scope.selected.bodyitemx.length; i++) {
+        //     $scope.selected.bodyitemx[i]=item;
+        // };
+        console.log($scope.selected, index);
+    };
+
+
+//selected.bodyitemx.body.title 
+
+    // This function adds items to the new bodyitemx array
+    /*$scope.select = function(item, type) {
+        if(type == 'body') {
+          $scope.selected.bodyitemx.push(item);
+        } else {
+          $scope.selected[type]=item;
+        };
+        console.log($scope.selected);
+    };*/
 
 });
+
+
 
 /*
 myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {

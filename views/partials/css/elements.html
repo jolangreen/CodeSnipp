@@ -81,7 +81,7 @@ form.search-form
 // Home Page
 </xmp><div ng-include="selected.cta.css"></div><xmp>
 
-</xmp><div ng-include="selected.body.css"></div><xmp>
+</xmp><div ng-repeat="body in selected.bodyitemx"><div ng-include="body.css"></div></div><xmp>
 
 // Contact Page
 
