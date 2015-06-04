@@ -14,19 +14,19 @@ footer
             padding-top: 5px
 
             li
-                list-style: none
                 float: left
+                list-style: none
                 a
+                    padding: 0 10px
                     color: $clrText
                     text-decoration: none
-                    padding: 0 10px
 
                     &:hover
                         color: $clrPrimary
                         text-decoration: none
                 &:after
-                    content: "|"
                     color: $clrText
+                    content: "|"
 
             li:last-child:after
                 content: ""
@@ -34,17 +34,17 @@ footer
         .social
             text-align: center
             a
-                display: block
+                background: $clrText
                 border-radius: 50%
-                width: 30px
+                display: block
+                float: right
                 height: 30px
-                line-height: 30px
                 margin-right: 15px
                 padding: 0 10px
-                font-size: 14px
-                float: right
-                background: $clrText
+                width: 30px
                 color: $clrBright
+                font-size: 14px
+                line-height: 30px
                 &:hover
                     background: $clrPrimary
                     text-decoration: none
@@ -52,9 +52,9 @@ footer
                 margin-right: 0
 
         .copyright
-            text-align: center
-            font-size: 11px
             color: $clrText
+            font-size: 11px
+            text-align: center
 
     .row:last-child
         padding: 20px 0
@@ -73,16 +73,16 @@ footer
                 a
                     display: inline-block
                     float: none
-                    margin-right: 5px
                     margin-left: 5px
+                    margin-right: 5px
 
 
             li
-                text-align: center
-                padding: 10px
-                float: none
-                width: 100%
                 border-bottom: 1px solid $clrDark
+                float: none
+                padding: 10px
+                width: 100%
+                text-align: center
                 &:after
                     content: ""
 </xmp>

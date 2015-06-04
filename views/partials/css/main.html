@@ -5,8 +5,8 @@
 body
     background: $clrBackground
     padding: 0px
-    font-family: $fontPrimary
     color: $clrText
+    font-family: $fontPrimary
     font-size: 14px
 
 a, a:visited
@@ -19,9 +19,9 @@ a:hover, a:focus, a:active
     text-decoration: none
 
 hr
-    margin: 15px 0
-    border: 0
     border-bottom: 1px solid $clrBright
+    border: 0
+    margin: 15px 0
 
 .img-fit img
     width: 100%
@@ -46,21 +46,21 @@ hr
             background-color: $clrBright
             border-top: 0
             display: none
+            left: -2px
+            list-style: none
             padding: 0
             position: absolute
-            left: -2px
             z-index: 3000
-            list-style: none
             li
+                background: $clrDark
+                +border(bottom, #555)
                 padding: 6px 5px
                 text-align: center
-                +border(bottom, #555)
-                background: $clrDark
                 a
-                    color: $clrBrightest
-                    margin: 0
                     display: block
+                    margin: 0
                     min-width: 200px
+                    color: $clrBrightest
                     text-decoration: none
 
                 &:hover
@@ -127,17 +127,17 @@ hr
     aside
         margin-bottom: 30px
     h3
-        color: $clrText
         margin-bottom: 5px
+        color: $clrText
     ul
-        padding-left: 0
-        margin-left: 0
         margin-bottom: 35px
+        margin-left: 0
+        padding-left: 0
     ul li
-        list-style: none
         border-bottom: 1px solid $clrBright
-        line-height: 40px
+        list-style: none
         margin-bottom: 0
+        line-height: 40px
         a
             color: $clrText
             &:hover
@@ -152,8 +152,8 @@ hr
 
         ul ul li
             border-bottom: none
-            line-height: 30px
             padding-left: 20px
+            line-height: 30px
 
     // li:before
     //     font-family: 'FontAwesome'

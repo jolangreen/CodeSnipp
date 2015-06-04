@@ -5,11 +5,11 @@
    ========================================================================== */
 
 .btn, a.btn, button.btn
-    color: $clrBrightest
     background: $clrPrimary
+    +transition(all 0.4s ease-in-out)
+    color: $clrBrightest
     //+border-radius(4px)
     //+box-shadow(0px)
-    +transition(all 0.4s ease-in-out)
     &:hover
         background: $clrSecondary
         color: $clrBrightest
@@ -22,30 +22,30 @@
 
 form
     input[type="text"], input[type="email"], input[type="url"], textarea
-        width: 100%
-        height: 30px
-        padding: 4px
         background: $clrBackground
         border: 1px solid $clrBright
+        +border-radius(5px)
+        height: 30px
+        margin-bottom: 15px
+        padding: 4px
+        width: 100%
         color: $clrText
         font-size: 13px
-        +border-radius(5px)
-        margin-bottom: 15px
 
     textarea
         height: 100px
 
     input[type="button"], input[type="submit"]
+        -moz-border-radius: 5px
+        background: $clrPrimary
+        border-radius: 5px
+        border: none
+        cursor: hand /* for IE 5.x */
+        cursor: pointer /* hand-shaped cursor */
+        font-size: 14px
         height: 36px
         padding: 8px
-        background: $clrPrimary
-        cursor: pointer /* hand-shaped cursor */
-        cursor: hand /* for IE 5.x */
-        border: none
         color: $clrBrightest
-        font-size: 14px
-        -moz-border-radius: 5px
-        border-radius: 5px
         &:hover
             background-color: $clrSecondary
 
@@ -58,19 +58,19 @@ form.search-form
         display: none
 
     input.search-field
-        border: none
         background: #f2f2f2
+        border: none
         +border-radius(4px)
-        color: #616161
-        font-size: 12px
         padding: 13px 22px
         width: 60%
+        color: #616161
+        font-size: 12px
 
     input[type="submit"]
+        background: $clrPrimary        
+        height: auto
         padding: 11px 16px
         font-size: 14px
-        height: auto
-        background: $clrPrimary
        
         
         
@@ -88,8 +88,8 @@ form.search-form
 
 .block-body
     h3
-        margin-top: 20px
         margin-bottom: 10px
+        margin-top: 20px
 
 .social .block-icon
     display: inline-block
@@ -121,9 +121,9 @@ form.search-form
         padding-left: 15px
 
         li:before
-            font-family: 'FontAwesome'
-            content: '\f058'
             margin: 0 5px 0 -15px
+            content: '\f058'
+            font-family: 'FontAwesome'
 
         li
             margin-bottom: 15px
@@ -154,35 +154,26 @@ article table
 
 // Icon
 .block-icon
-    width: 40px
-    height: 40px
-    line-height: 40px
-    font-size: 100%
-    text-align: center
     background: $clrPrimary
-    color: $clrBrightest
     +border-radius(50%)
-    margin: 0 auto
     display: block
-
-.block-icon-o
-    width: 40px
-    height: 40px
-    line-height: 40px
+    margin: 0 auto
+    +size(40px)
+    color: $clrBrightest
     font-size: 100%
+    line-height: 40px
     text-align: center
+
+
+.block-icon.outline
     background: transparent
-    color: $clrBrightest
     border: 2px solid $clrBrightest
-    +border-radius(50%)
-    margin: 0 auto
-    display: block
+
 
 .block-icon.large
-    width: 70px
-    height: 70px
-    line-height: 70px
     font-size: 30px
+    line-height: 70px
+    +size(70px)
 
 
 // Image Hover
@@ -192,66 +183,64 @@ article table
     margin-bottom: 20px
     overflow: hidden
     img
+        min-height: 100%
         position: absolute
         width: 100%
-        min-height: 100%
 
 
 .image-hover-fx
-    position: relative
     overflow: hidden
+    position: relative
 
     .image-overlay
         background-color: $clrPrimary
-        width: 100%
-        height: 100%
         display: block
-        position: absolute
-        top: 0
+        filter: alpha(opacity=0)
+        height: 100%
         left: 0
         opacity: 0
-        filter: alpha(opacity=0)
-        -webkit-transition: all 0.2s ease
+        position: absolute
+        top: 0
         transition: all 0.2s ease
+        -webkit-transition: all 0.2s ease
+        width: 100%
 
     .portfolio-zoom
-        width: 65px
-        height: 65px
-        text-align: center
         background-color: $clrDarkest
-        display: none
-        line-height: 65px
-        position: absolute
-        top: 50%
-        left: -65px
-        margin-top: -22px
-        font-size: 30px
-        color: #fff
-        display: block
         border-radius: 2px
+        display: block        
+        left: -65px
+        line-height: 65px
+        margin-top: -22px
+        position: absolute
+        text-align: center
+        top: 50%
+        +size(65px)
+        color: #fff
+        font-size: 30px
         &:hover
             background: $clrPrimary
 
     .title-fx
-        position: absolute
         bottom: 15%
-        color: white
-        text-align: center
-        width: 100%
-        font-size: 20px
         opacity: 0
+        position: absolute
+        width: 100%
+        color: white
+        font-size: 20px
+        text-align: center
 
 // Hover Effects
 .image-item:hover .image-hover-fx .image-overlay
-    opacity: 0.50
     filter: alpha(opacity=50)
+    opacity: 0.50
 
 .image-item:hover .image-hover-fx .portfolio-zoom
     display: block
     left: 50%
     margin-left: -35px
-    -webkit-transition: all 0.2s ease
     transition: all 0.2s ease
+    -webkit-transition: all 0.2s ease
 
 .image-item:hover .image-hover-fx .title-fx
     opacity: 1
@@ -265,18 +254,17 @@ article table
 // Tint
 .tint
     background: rgba(0, 0, 0, .5)
-    width: 100%
-    height: 100%
     position: absolute
+    +size(100%)
     z-index: 1
 
 // Pagination
 .pagination .page-numbers
-    padding: 10px
     background: $clrPrimary
-    color: $clrBrightest
-    margin-right: 5px
     border-radius: 4px
+    margin-right: 5px
+    padding: 10px
+    color: $clrBrightest
 
 .pagination .page-numbers.current
     background: $clrSecondary
@@ -284,9 +272,9 @@ article table
     
 nav.post-navigation
     +border(top, #ccc)
-    padding-top: 20px
     height: 80px
-    
+    padding-top: 20px
+
 nav .navigation
     border-top: 1px solid $clrBright
     padding-top: 25px
@@ -307,18 +295,18 @@ nav .nav-links a
    ========================================================================== */
 
 .ad
-    margin: 0 auto
     background: #f1f1f1
     border: 1px solid #fff
+    margin: 0 auto
     overflow: hidden
 
 
 .ad:after
     content: "Advertise here"
+    display: block
     font-size: 13px
     text-align: center
     width: 100%
-    display: block
 
 
 .ad.leaderboard:after 
@@ -328,11 +316,10 @@ nav .nav-links a
     line-height: 250px 
 
 .leaderboard
-    width: 728px
     height: 90px
-
+    width: 728px
 
 .medrectangle
-    width: 300px
     height: 250px
+    width: 300px
 </xmp>

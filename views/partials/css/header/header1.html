@@ -1,28 +1,28 @@
 <xmp>
 .top
-    height: 40px
     background: $clrDark
+    height: 40px
 
 .navbar-form
-    margin-top: 6px
     margin-bottom: 6px
+    margin-top: 6px
     input[type="text"]
-        width: 200px
         border-radius: 5px
         height: auto !important
-        +transition(all 0.4s ease-in-out)
         margin-bottom: 0
+        +transition(all 0.4s ease-in-out)
+        width: 200px
         &:focus
             width: 250px
     i
-        top: 0px
-        position: relative
         left: -28px
+        position: relative
+        top: 0px
         color: $clrMedium
     input[type="submit"]
         background: $clrPrimary
-        margin-left: -12px
         height: 28px
+        margin-left: -12px
         padding: 2px 8px
 
 
@@ -39,19 +39,19 @@ header
             line-height: 0
 
         h1 a.logo
+            background: image-url("logo.png") no-repeat
             display: block
             float: left
+            height: 50px
             left: 0
             width: 200px
-            height: 50px
-            background: image-url("logo.png") no-repeat
 
 // NAVIGATION ----------------------------->
 nav.navbar
+    background: transparent
+    +border-radius(0)
     margin-bottom: 0
     padding: 7px 0 4px
-    +border-radius(0)
-    background: transparent
 
     a, a:visited
         color: $clrMedium
@@ -63,13 +63,13 @@ nav.navbar
         display: inline-block
         & > li
             display: inline-block
-            position: relative
             padding: 5px 0
+            position: relative
             & > a
-                padding: 8px 15px
                 +border-radius(10px)
-                text-transform: uppercase
                 margin-left: 5px
+                padding: 8px 15px
+                text-transform: uppercase
                 &:hover
                     background-color: $clrPrimary
 
@@ -79,7 +79,7 @@ nav.navbar
         .current_page_ancestor > a,
         .current-menu-item > a,
         .current-menu-ancestor > a
-            color: $clrBrightest
             background-color: $clrPrimary
+            color: $clrBrightest
             text-decoration: none
 </xmp>
