@@ -8,9 +8,15 @@
           <tabset>
             <tab heading="Header">
                 <br>
-                <h4>
-                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.header.title }}</span></div>
-                </h4>
+                <div class="row">
+                    <div class="col-md-2">
+                       <button class="btn btn-lg btn-success full-width"><i class="fa fa-plus"></i> Add Module</button> 
+                    </div>
+                    <div class="col-md-10">
+                        <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.header.title }}</span></div>
+                    </div>
+                </div>
+
                 <div class="row">
                     <div class="col-md-4" ng-repeat="headeritem in headeritems" ng-class="{active: selected.header == headeritem}">
                         <img src="{{headeritem.img}}" alt="">
@@ -22,7 +28,7 @@
             <tab heading="Footer">
                 <br>
                 <h4>
-                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.footer.title }}</span></div>
+                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.footer.title }}</span> <span class="label label-primary pull-right">Edit Section</span></div>
                 </h4>
                 <div class="row">
                     <div class="col-md-4" ng-repeat="footeritem in footeritems" ng-class="{active: selected.footer == footeritem}">
@@ -58,17 +64,16 @@
                     </div>
                 </div>
             </tab>
-            <tab heading="Home Body">
+            <tab heading="Body">
                 <br>
                 <h4>
                     <div  class="alert alert-info">Selected Item: <span class="label label-success" ng-repeat="body in selected.bodyitemx">{{body.title}}</span></div>
                 </h4>
                 <div class="row">
-                    <div class="col-md-4" ng-repeat="bodyitem in bodyitems" selection-model selection-model-mode="multiple-additive"
-        selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
+                    <div class="col-md-4" ng-repeat="bodyitem in bodyitems" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
                         <img src="{{bodyitem.img}}" alt="">
                         <h3>{{bodyitem.title}}</h3>
-                        <a href="" class="btn btn-primary" ng-click="selectnew(bodyitem, index)">Select</a>
+                        <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body')">Select</a>
                     </div>
                 </div>
             </tab>

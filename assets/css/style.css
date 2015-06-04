@@ -2,7 +2,9 @@
 
 .main-header { padding-bottom: 40px; }
 
-.tab-content img { width: 100%; }
+.alert.alert-info { padding: 12px 16px; font-size: 16px; }
+
+.tab-content img, .full-width { width: 100%; }
 
 .tab-content .tab-pane > .row { padding-top: 50px; }
 
