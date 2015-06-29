@@ -1,129 +1,23 @@
 <xmp>
-
 /* ==========================================================================
-   Buttons
+    PAGE ELEMENTS / FEATURES
    ========================================================================== */
 
-.btn, a.btn, button.btn
-    background: $clrPrimary
-    +transition(all 0.4s ease-in-out)
-    color: $clrBrightest
-    //+border-radius(4px)
-    //+box-shadow(0px)
-    &:hover
-        background: $clrSecondary
-        color: $clrBrightest
-
-
-
-/* ==========================================================================
-   Forms
-   ========================================================================== */
-
-form
-    input[type="text"], input[type="email"], input[type="url"], textarea
-        background: $clrBackground
-        border: 1px solid $clrBright
-        +border-radius(5px)
-        height: 30px
-        margin-bottom: 15px
-        padding: 4px
-        width: 100%
-        color: $clrText
-        font-size: 13px
-
-    textarea
-        height: 100px
-
-    input[type="button"], input[type="submit"]
-        -moz-border-radius: 5px
-        background: $clrPrimary
-        border-radius: 5px
-        border: none
-        cursor: hand /* for IE 5.x */
-        cursor: pointer /* hand-shaped cursor */
-        font-size: 14px
-        height: 36px
-        padding: 8px
-        color: $clrBrightest
-        &:hover
-            background-color: $clrSecondary
-
-//Search Form
-form.search-form 
-    label
-        display: inline
-
-    .screen-reader-text
-        display: none
-
-    input.search-field
-        background: #f2f2f2
-        border: none
-        +border-radius(4px)
-        padding: 13px 22px
-        width: 60%
-        color: #616161
-        font-size: 12px
-
-    input[type="submit"]
-        background: $clrPrimary        
-        height: auto
-        padding: 11px 16px
-        font-size: 14px
-       
-        
-        
-/* ==========================================================================
-   Features / Page Elements
-   ========================================================================== */
-
-// Home Page
+/*___________________________ HOME PAGE ___________________________*/
 </xmp><div ng-include="selected.cta.css"></div><xmp>
 
 </xmp><div ng-repeat="body in selected.bodyitemx"><div ng-include="body.css"></div></div><xmp>
 
-// Contact Page
-
-
-.block-body
-    h3
-        margin-bottom: 10px
-        margin-top: 20px
-
-.social .block-icon
-    display: inline-block
-
-// Gallery
-.gallery-area
-    .col-md-4
-        padding-left: 0
-        padding-right: 0
-    .image
-        height: 290px
-
-
-/* ----- BLOG ----- */
-.blog article
-    border-bottom: 1px solid $clrBright
-    margin-bottom: 30px
-
-.comment-list footer
-    background: transparent
-    
-.textwidget
-    padding: 10px
-
 // ----- LIST -----
-.primary article
+.primary
     ul
         list-style-type: none
         padding-left: 15px
 
         li:before
-            margin: 0 5px 0 -15px
-            content: '\f058'
             font-family: 'FontAwesome'
+            content: '\f00c'
+            margin: 0 5px 0 -15px
 
         li
             margin-bottom: 15px
@@ -134,7 +28,7 @@ form.search-form
 
 
 // ----- TABLE -----
-article table
+table
     thead tr
         background: $clrPrimary
         color: $clrBrightest
@@ -148,178 +42,16 @@ article table
     tr td
         padding: 5px 10px
 
+/*___________________________ BLOG PAGE ___________________________*/
 
+.blog article
+    border-bottom: 1px solid $clrBright
+    margin-bottom: 30px
 
-/* EFFECTS & EXTRAS */
-
-// Icon
-.block-icon
-    background: $clrPrimary
-    +border-radius(50%)
-    display: block
-    margin: 0 auto
-    +size(40px)
-    color: $clrBrightest
-    font-size: 100%
-    line-height: 40px
-    text-align: center
-
-
-.block-icon.outline
+.comment-list footer
     background: transparent
-    border: 2px solid $clrBrightest
-
-
-.block-icon.large
-    font-size: 30px
-    line-height: 70px
-    +size(70px)
-
-
-// Image Hover
-.image
-    display: block
-    height: 190px
-    margin-bottom: 20px
-    overflow: hidden
-    img
-        min-height: 100%
-        position: absolute
-        width: 100%
-
-
-.image-hover-fx
-    overflow: hidden
-    position: relative
-
-    .image-overlay
-        background-color: $clrPrimary
-        display: block
-        filter: alpha(opacity=0)
-        height: 100%
-        left: 0
-        opacity: 0
-        position: absolute
-        top: 0
-        transition: all 0.2s ease
-        -webkit-transition: all 0.2s ease
-        width: 100%
-
-    .portfolio-zoom
-        background-color: $clrDarkest
-        border-radius: 2px
-        display: block        
-        left: -65px
-        line-height: 65px
-        margin-top: -22px
-        position: absolute
-        text-align: center
-        top: 50%
-        +size(65px)
-        color: #fff
-        font-size: 30px
-        &:hover
-            background: $clrPrimary
-
-    .title-fx
-        bottom: 15%
-        opacity: 0
-        position: absolute
-        width: 100%
-        color: white
-        font-size: 20px
-        text-align: center
-
-// Hover Effects
-.image-item:hover .image-hover-fx .image-overlay
-    filter: alpha(opacity=50)
-    opacity: 0.50
-
-.image-item:hover .image-hover-fx .portfolio-zoom
-    display: block
-    left: 50%
-    margin-left: -35px
-    transition: all 0.2s ease
-    -webkit-transition: all 0.2s ease
-
-.image-item:hover .image-hover-fx .title-fx
-    opacity: 1
-    transition: all 0.3s ease
-
-
-// Spacing
-.spacing-container
-    padding: 20px 0
-
-// Tint
-.tint
-    background: rgba(0, 0, 0, .5)
-    position: absolute
-    +size(100%)
-    z-index: 1
-
-// Pagination
-.pagination .page-numbers
-    background: $clrPrimary
-    border-radius: 4px
-    margin-right: 5px
-    padding: 10px
-    color: $clrBrightest
-
-.pagination .page-numbers.current
-    background: $clrSecondary
-    color: $clrBrightest
     
-nav.post-navigation
-    +border(top, #ccc)
-    height: 80px
-    padding-top: 20px
+.textwidget
+    padding: 10px
 
-nav .navigation
-    border-top: 1px solid $clrBright
-    padding-top: 25px
-
-nav .nav-links a
-    display: inline-block
-    color: $clrBrightest
-    background: $clrSecondary
-    padding: 2px 8px
-    +border-radius(4px)
-    &:first-child
-        float: left !important
-    &:last-child
-        float: right
-
-/* ==========================================================================
-   ADVERTISING
-   ========================================================================== */
-
-.ad
-    background: #f1f1f1
-    border: 1px solid #fff
-    margin: 0 auto
-    overflow: hidden
-
-
-.ad:after
-    content: "Advertise here"
-    display: block
-    font-size: 13px
-    text-align: center
-    width: 100%
-
-
-.ad.leaderboard:after 
-    line-height: 90px 
-
-.ad.medrectangle:after 
-    line-height: 250px 
-
-.leaderboard
-    height: 90px
-    width: 728px
-
-.medrectangle
-    height: 250px
-    width: 300px
 </xmp>

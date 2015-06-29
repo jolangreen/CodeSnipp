@@ -92,7 +92,6 @@ myApp.controller('HTMLController', function ($scope, $modal, $log) {
             html: 'views/partials/html/footer/footer3.html',
             css: 'views/partials/css/footer/footer3.html'
         },
-
         {
             title: '4 column sections',
             img: 'assets/images/footer/footer4.jpg',
@@ -142,27 +141,26 @@ myApp.controller('HTMLController', function ($scope, $modal, $log) {
             title: 'Content Left - Sidebar Right',
             img: 'assets/images/body/sidebar1.jpg',
             html: 'views/partials/html/body/sidebar1.html',
-            css: 'views/partials/css/body/sidebar1.html'
+            css: null
         },
         {
             title: 'Content Right - Sidebar Left',
             img: 'assets/images/body/sidebar2.jpg',
             html: 'views/partials/html/body/sidebar2.html',
-            css: 'views/partials/css/body/sidebar2.html'
+            css: null
         },
         {
             title: 'Media - Icons & Content List',
             img: 'assets/images/body/media-list.jpg',
             html: 'views/partials/html/body/services.html',
-            css: 'views/partials/css/body/services.html'
+            css: null
         },
         {
             title: 'Form Left - Content Right',
             img: 'assets/images/body/contact.jpg',
             html: 'views/partials/html/body/contact.html',
-            css: 'views/partials/css/body/contact.html'
+            css: null
         },
-
         {
             title: 'Center Image Section',
             img: 'assets/images/sample-img.jpg',

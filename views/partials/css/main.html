@@ -1,37 +1,9 @@
 <xmp>
 /* ==========================================================================
-   Global
+   LAYOUT
    ========================================================================== */
-body
-    background: $clrBackground
-    padding: 0px
-    color: $clrText
-    font-family: $fontPrimary
-    font-size: 14px
 
-a, a:visited
-    color: $clrPrimary
-    text-decoration: none
-    +transition(all 0.2s ease-in-out)
-
-a:hover, a:focus, a:active
-    color: $clrSecondary
-    text-decoration: none
-
-hr
-    border-bottom: 1px solid $clrBright
-    border: 0
-    margin: 15px 0
-
-.img-fit img
-    width: 100%
-
-
-/* ==========================================================================
-   Header
-   ========================================================================== */
-.home header
-    background: transparent
+/*___________________________ HEADER ___________________________*/
 </xmp><div ng-include="selected.header.css"></div><xmp>
 
         //Sub-Menu --
@@ -80,11 +52,8 @@ hr
             li:hover > ul, li:hover > ul
                 display: block
 
-/* ==========================================================================
-   Banner
-   ========================================================================== */
+/*___________________________ BANNER ___________________________*/
 </xmp><div ng-include="selected.banner.css"></div><xmp>
-
 
 /* Page Heading */
 .page-intro
@@ -111,10 +80,7 @@ hr
     margin-bottom: 0
 
 
-
-/* ==========================================================================
-   Main Body, Content Area
-   ========================================================================== */
+/*___________________________ MAIN BODY, CONTENT AREA ___________________________*/
 #main section
     padding: 80px 0
 
@@ -159,7 +125,7 @@ hr
     //     font-family: 'FontAwesome'
     //     content: '\f105'
     //     margin: 0 10px 0 -15px
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+
+
+/*___________________________ FOOTER ___________________________*/
 </xmp><div ng-include="selected.footer.css"></div>

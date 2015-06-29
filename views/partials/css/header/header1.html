@@ -37,6 +37,13 @@ header
         h1
             margin: 0
             line-height: 0
+            @media (max-width: 480px)
+                background: white
+                display: block
+                width: 100%
+                height: 100px
+                float: none
+                text-align: center
 
         h1 a.logo
             background: image-url("logo.png") no-repeat
@@ -45,13 +52,21 @@ header
             height: 50px
             left: 0
             width: 200px
+            @media (max-width: 480px)
+                margin: 0 auto
+                float: none
+                left: auto
 
-// NAVIGATION ----------------------------->
+/*___________________________ NAVIGATION ___________________________*/
 nav.navbar
     background: transparent
     +border-radius(0)
     margin-bottom: 0
     padding: 7px 0 4px
+    @media (max-width: 480px)
+        padding: 0
+        .navbar-header
+            background: $clrPrimary
 
     a, a:visited
         color: $clrMedium

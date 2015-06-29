@@ -10,8 +10,7 @@
 
 <link rel="stylesheet" href="assets/css/bootstrap.css" />
 <link rel="stylesheet" href="assets/css/font-awesome.css" />
-
-<link href="style.css" rel="stylesheet" type="text/css" data-skrollr-stylesheet />
+<link rel="stylesheet" href="style.css" type="text/css" />
 
 </head>
 
@@ -21,18 +20,14 @@
 ================================================== -->
 </xmp><div ng-include="selected.header.html"></div><xmp>
 
-<main id="main">
-<!-- Banner
-================================================== -->
-</xmp><div ng-include="selected.banner.html"></div><xmp>
-
 <!-- Main Content
 ================================================== -->
-
+<main id="main">
+<!-- begin BANNER -->
+</xmp><div ng-include="selected.banner.html"></div><xmp>
+<!-- end BANNER -->
 </xmp><div ng-include="selected.cta.html"></div><xmp>
-
 </xmp><div ng-repeat="body in selected.bodyitemx"><div ng-include="body.html"></div></div><xmp>
-
 </main>
 <div class="clear"></div>
 
@@ -49,3 +44,4 @@
 </body>
 </html>
 </xmp>
+
