@@ -1,0 +1,64 @@
+<xmp>
+.home header
+    background: transparent
+    
+header
+    position: relative
+    z-index: 1000
+    width: 100%
+    background: image-url("headers/banner1.jpg") #f1f1f1
+    background-size: cover
+
+    .container
+        position: relative
+
+        h1
+            margin: 0
+            line-height: 0
+
+        h1 a.logo
+            display: block
+            float: left
+            left: 0
+            width: 200px
+            height: 50px
+            background: image-url("logo.png") no-repeat
+
+
+/*___________________________ NAVIGATION ___________________________*/
+nav.navbar
+    margin-bottom: 0
+    padding: 7px 0 4px
+    +border-radius(0)
+    background: transparent
+
+    a, a:visited
+        color: $clrBrightest
+        &:hover
+            color: $clrBrightest
+            text-decoration: none
+
+    .nav
+        display: inline-block
+        & > li
+            display: inline-block
+            position: relative
+            padding: 5px 0
+            & > a
+                padding: 8px 15px
+                +border-radius(10px)
+                text-transform: uppercase
+                margin-left: 5px
+                &:hover
+                    background-color: $clrPrimary
+
+        //Active State --
+        .active > a,
+        .current_page_item > a,
+        .current_page_ancestor > a,
+        .current-menu-item > a,
+        .current-menu-ancestor > a
+            color: $clrBrightest
+            background-color: $clrPrimary
+            text-decoration: none
+</xmp>
