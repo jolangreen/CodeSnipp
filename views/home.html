@@ -8,15 +8,9 @@
           <tabset>
             <tab heading="Header">
                 <br>
-                <div class="row">
-                    <div class="col-md-2">
-                       <button class="btn btn-lg btn-success full-width"><i class="fa fa-plus"></i> Add Module</button> 
-                    </div>
-                    <div class="col-md-10">
-                        <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.header.title }}</span></div>
-                    </div>
-                </div>
-
+                <h4>
+                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.header.title }}</span></div>
+                </h4>
                 <div class="row">
                     <div class="col-md-4" ng-repeat="headeritem in headeritems" ng-class="{active: selected.header == headeritem}">
                         <img src="{{headeritem.img}}" alt="">
