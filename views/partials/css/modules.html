@@ -1,0 +1,106 @@
+<xmp>
+/* ==========================================================================
+   MODULES
+   ========================================================================== */
+
+</xmp><div ng-repeat="body in selected.bodyitemx"><div ng-include="body.css"></div></div><xmp>
+
+
+
+/* Page Heading */
+.page-intro
+    background: image-url("headers/banner1.jpg")
+    background-size: cover
+    color: $clrBrightest
+
+    .tint
+        padding: 30px 0
+        position: relative
+
+    .col-md-6:last-child
+        text-align: right
+
+    .col-md-6 a, .page-intro .col-md-6 h1
+        color: $clrBrightest
+
+    .col-md-6 h1
+        margin-bottom: 0
+
+.breadcrumb
+    background: transparent
+    line-height: 40px
+    margin-bottom: 0
+
+
+
+// Pagination
+.pagination .page-numbers
+    padding: 10px
+    background: $clrPrimary
+    color: $clrBrightest
+    margin-right: 5px
+    border-radius: 4px
+
+.pagination .page-numbers.current
+    background: $clrSecondary
+    color: $clrBrightest
+    
+nav.post-navigation
+    +border(top, #ccc)
+    padding-top: 20px
+    height: 80px
+    
+nav .navigation
+    border-top: 1px solid $clrBright
+    padding-top: 25px
+
+nav .nav-links a
+    display: inline-block
+    color: $clrBrightest
+    background: $clrSecondary
+    padding: 2px 8px
+    +border-radius(4px)
+    &:first-child
+        float: left !important
+    &:last-child
+        float: right
+
+
+
+
+/* ==========================================================================
+   ADVERTISING
+   ========================================================================== */
+
+.ad
+    margin: 0 auto
+    background: #f1f1f1
+    border: 1px solid #fff
+    overflow: hidden
+
+
+.ad:after
+    content: "Advertise here"
+    font-size: 13px
+    text-align: center
+    width: 100%
+    display: block
+
+
+.ad.leaderboard:after 
+    line-height: 90px 
+
+.ad.medrectangle:after 
+    line-height: 250px 
+
+.leaderboard
+    width: 728px
+    height: 90px
+
+
+.medrectangle
+    width: 300px
+    height: 250px
+
+
+</xmp>

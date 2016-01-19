@@ -27420,28 +27420,31 @@ myApp.controller('HTMLController', function ($scope, $modal, $log) {
         },
     ];
 
-    $scope.ctaitems = [
+    $scope.bodyitems = [
         {
             title: 'Icon & Content',
-            img: 'assets/images/cta/cta1.jpg',
-            html: 'views/partials/html/cta/cta1.html',
-            css: 'views/partials/css/cta/cta1.html'
+            img: 'assets/images/body/cta1.jpg',
+            html: 'views/partials/html/body/cta1.html',
+            css: 'views/partials/css/body/cta1.html'
         },
         {
             title: 'Image With Text Overlay',
-            img: 'assets/images/cta/cta2.jpg',
-            html: 'views/partials/html/cta/cta2.html',
-            css: 'views/partials/css/cta/cta2.html'
+            img: 'assets/images/body/cta2.jpg',
+            html: 'views/partials/html/body/cta2.html',
+            css: 'views/partials/css/body/cta2.html'
         },
         {
             title: 'Image, Title & Text',
-            img: 'assets/images/cta/cta3.jpg',
-            html: 'views/partials/html/cta/cta3.html',
-            css: 'views/partials/css/cta/cta3.html'
+            img: 'assets/images/body/cta3.jpg',
+            html: 'views/partials/html/body/cta3.html',
+            css: 'views/partials/css/body/cta1.html'
         },
-    ];
-
-    $scope.bodyitems = [
+        {
+            title: 'Gallery',
+            img: 'assets/images/body/gallery.jpg',
+            html: 'views/partials/html/body/gallery.html',
+            css: 'views/partials/css/body/gallery.html'
+        },
         {
             title: 'Content Left - Sidebar Right',
             img: 'assets/images/body/sidebar1.jpg',
@@ -27461,16 +27464,46 @@ myApp.controller('HTMLController', function ($scope, $modal, $log) {
             css: null
         },
         {
-            title: 'Form Left - Content Right',
-            img: 'assets/images/body/contact.jpg',
-            html: 'views/partials/html/body/contact.html',
+            title: 'Content & Image Left',
+            img: 'assets/images/body/content-image-left.jpg',
+            html: 'views/partials/html/body/content-image-left.html',
+            css: null
+        },
+        {
+            title: 'Content & Image Right',
+            img: 'assets/images/body/content-image-right.jpg',
+            html: 'views/partials/html/body/content-image-right.html',
             css: null
         },
         {
             title: 'Center Image Section',
-            img: 'assets/images/sample-img.jpg',
+            img: 'assets/images/body/center-img.jpg',
             html: 'views/partials/html/body/center-img.html',
-            css: 'views/partials/css/body/center-img.html'
+            css: 'views/partials/css/body/callout.html'
+        },
+        {
+            title: 'Callout',
+            img: 'assets/images/body/callout.jpg',
+            html: 'views/partials/html/body/callout.html',
+            css: 'views/partials/css/body/callout.html'
+        },
+        {
+            title: 'Background Left',
+            img: 'assets/images/body/background-left.jpg',
+            html: 'views/partials/html/body/background-left.html',
+            css: 'views/partials/css/body/background.html'
+        },
+        {
+            title: 'Background Right',
+            img: 'assets/images/body/background-right.jpg',
+            html: 'views/partials/html/body/background-right.html',
+            css: 'views/partials/css/body/background.html'
+        },
+        {
+            title: 'Form Left - Content Right',
+            img: 'assets/images/body/contact.jpg',
+            html: 'views/partials/html/body/contact.html',
+            css: null
         },
     ];
 
@@ -27577,14 +27610,25 @@ myApp.directive('cssTemplate', function(){
     }
 }),
 
-myApp.directive('csselementsTemplate', function(){
+myApp.directive('csspageTemplate', function(){
     return {
 //      There are 3 types of directives, but we only use two types, they are:
 //      Element type: that means your directive will be a new HTML tag, for example <user-card></user-card>
 //      Attribute type: thats means your directive will be a attribute like <div user-card></div>
 //      So restrict: 'AE' means that your directive will be both, you can use just 'A' or just 'E'
         restrict: 'AE',
-        templateUrl: 'views/partials/css/elements.html'
+        templateUrl: 'views/partials/css/page-all.html'
+    }
+}),
+
+myApp.directive('cssmodulesTemplate', function(){
+    return {
+//      There are 3 types of directives, but we only use two types, they are:
+//      Element type: that means your directive will be a new HTML tag, for example <user-card></user-card>
+//      Attribute type: thats means your directive will be a attribute like <div user-card></div>
+//      So restrict: 'AE' means that your directive will be both, you can use just 'A' or just 'E'
+        restrict: 'AE',
+        templateUrl: 'views/partials/css/modules.html'
     }
 }),
 

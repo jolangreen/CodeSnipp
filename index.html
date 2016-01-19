@@ -29,7 +29,8 @@
     <h1>Code Snipp <small>- Jolan Green</small></h1>
     <button id="target-to-copy" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text" data-clipboard-text="Default clipboard">Copy HTML</button>
     <button id="target-to-copy-css" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css" data-clipboard-text="Default clipboard">Copy CSS Layout</button>
-    <button id="target-to-copy-css2" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css2" data-clipboard-text="Default clipboard">Copy CSS Page Elements</button>
+    <button id="target-to-copy-css2" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css2" data-clipboard-text="Default clipboard">Copy CSS Page</button>
+    <button id="target-to-copy-css3" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css3" data-clipboard-text="Default clipboard">Copy CSS Modules</button>
 </div>
 
 <!-- Main Content
@@ -47,7 +48,7 @@
 
 <script>
     $(document).ready(function() {
-        var clientTarget = new ZeroClipboard($("#target-to-copy, #target-to-copy-css, #target-to-copy-css2"), {
+        var clientTarget = new ZeroClipboard($("#target-to-copy, #target-to-copy-css, #target-to-copy-css2, #target-to-copy-css3"), {
             moviePath: "assets/js/ZeroClipboard.swf",
             debug: false
         });

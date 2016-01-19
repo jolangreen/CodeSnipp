@@ -58,5 +58,9 @@ $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
     transition: (all 0.3s ease-in-out);
 }
 
+.alert .label {
+    margin: 0 3px;
+    display: inline-block;
+}
 
 @import "compass/css3";

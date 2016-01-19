@@ -45,19 +45,6 @@
                     </div>
                 </div>
             </tab>
-            <tab heading="Call To Action">
-                <br>
-                <h4>
-                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.cta.title }}</span></div>
-                </h4>
-                <div class="row">
-                    <div class="col-md-4" ng-repeat="ctaitem in ctaitems" ng-class="{active: selected.cta == ctaitem}">
-                        <img src="{{ctaitem.img}}" alt="">
-                        <h3>{{ctaitem.title}}</h3>
-                        <a href="" class="btn btn-primary" ng-click="select(ctaitem, 'cta')">Select</a>
-                    </div>
-                </div>
-            </tab>
             <tab heading="Body">
                 <br>
                 <h4>
@@ -76,14 +63,19 @@
                     <html-template id="clipboard-text"></html-template>
                 </pre>
             </tab>
-            <tab heading="Final CSS">
+            <tab heading="Layout CSS">
                 <pre>
                     <css-template id="clipboard-text-css"></css-template>
                 </pre>
             </tab>
-            <tab heading="Final CSS Elements">
+            <tab heading="Page CSS">
                 <pre>
-                    <csselements-template id="clipboard-text-css2"></csselements-template>
+                    <csspage-template id="clipboard-text-css2"></csspage-template>
+                </pre>
+            </tab>
+            <tab heading="Modules CSS">
+                <pre>
+                    <cssmodules-template id="clipboard-text-css3"></cssmodules-template>
                 </pre>
             </tab>
           </tabset>

@@ -11,3 +11,8 @@
 .tab-content .col-md-4 { text-align: center; padding: 10px; }
 
 .tab-content .col-md-4.active { background: #C3F9B4; border-radius: 4px; transition: all 0.3s ease-in-out; }
+
+.alert .label {
+    margin: 0 3px;
+    display: inline-block;
+}
