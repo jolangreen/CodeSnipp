@@ -14,7 +14,7 @@
  * Angular Team have created a separate module for that called ngRoute, and if we want
  * to define routes in our application we need to include that dependency.
  */
-var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'selectionModel']);
+var myApp = angular.module('myApp', ['ngRoute', 'ui.bootstrap', 'selectionModel', 'ngFileSaver']);
 
 
 /**
@@ -28,19 +28,11 @@ myApp.config(['$routeProvider', function($routeProvider){
     $routeProvider
     .when('/', {
         templateUrl: 'views/home.html',
-        controller : 'HTMLController'
+        controller : 'BaseController'
     })
     .when('/phpcode', {
         templateUrl: 'views/phpcode.html',
         controller : 'PhpController'
-    })
-    .when('/services', {
-        templateUrl: 'views/services.html',
-        controller : 'UsersController'
-    })
-    .when('/contact', {
-        templateUrl: 'views/contact.html',
-        controller : 'UsersController'
     })
     .otherwise({
         redirectTo: '/'

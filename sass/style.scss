@@ -63,4 +63,8 @@ $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
     display: inline-block;
 }
 
+.label:empty {
+    display: none !important;
+}
+
 @import "compass/css3";

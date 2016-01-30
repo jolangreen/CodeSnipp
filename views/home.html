@@ -4,82 +4,80 @@
 
     <div class="row">
 
-        <div ng-controller="TabsDemoCtrl">
-          <tabset>
-            <tab heading="Header">
-                <br>
-                <h4>
-                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.header.title }}</span></div>
-                </h4>
-                <div class="row">
-                    <div class="col-md-4" ng-repeat="headeritem in headeritems" ng-class="{active: selected.header == headeritem}">
-                        <img src="{{headeritem.img}}" alt="">
-                        <h3>{{headeritem.title}}</h3>
-                        <a href="" class="btn btn-primary" ng-click="select(headeritem, 'header')">Select</a>
-                    </div>
+      <tabset>
+        <tab heading="Header">
+            <br>
+            <h4>
+                <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.header.title }}</span></div>
+            </h4>
+            <div class="row">
+                <div class="col-md-4" ng-repeat="headeritem in headeritems" ng-class="{active: selected.header == headeritem}">
+                    <img src="{{headeritem.img}}" alt="">
+                    <h3>{{headeritem.title}}</h3>
+                    <a href="" class="btn btn-primary" ng-click="select(headeritem, 'header')">Select</a>
                 </div>
-            </tab>
-            <tab heading="Footer">
-                <br>
-                <h4>
-                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.footer.title }}</span> <span class="label label-primary pull-right">Edit Section</span></div>
-                </h4>
-                <div class="row">
-                    <div class="col-md-4" ng-repeat="footeritem in footeritems" ng-class="{active: selected.footer == footeritem}">
-                        <img src="{{footeritem.img}}" alt="">
-                        <h3>{{footeritem.title}}</h3>
-                        <a href="" class="btn btn-primary" ng-click="select(footeritem, 'footer')">Select</a>
-                    </div>
+            </div>
+        </tab>
+        <tab heading="Footer">
+            <br>
+            <h4>
+                <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.footer.title }}</span> <span class="label label-primary pull-right">Edit Section</span></div>
+            </h4>
+            <div class="row">
+                <div class="col-md-4" ng-repeat="footeritem in footeritems" ng-class="{active: selected.footer == footeritem}">
+                    <img src="{{footeritem.img}}" alt="">
+                    <h3>{{footeritem.title}}</h3>
+                    <a href="" class="btn btn-primary" ng-click="select(footeritem, 'footer')">Select</a>
                 </div>
-            </tab>
-            <tab heading="Banner">
-                <br>
-                <h4>
-                    <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.banner.title }}</span></div>
-                </h4>
-                <div class="row">
-                    <div class="col-md-4" ng-repeat="banneritem in banneritems" ng-class="{active: selected.banner == banneritem}">
-                        <img src="{{banneritem.img}}" alt="">
-                        <h3>{{banneritem.title}}</h3>
-                        <a href="" class="btn btn-primary" ng-click="select(banneritem, 'banner')">Select</a>
-                    </div>
+            </div>
+        </tab>
+        <tab heading="Banner">
+            <br>
+            <h4>
+                <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.banner.title }}</span></div>
+            </h4>
+            <div class="row">
+                <div class="col-md-4" ng-repeat="banneritem in banneritems" ng-class="{active: selected.banner == banneritem}">
+                    <img src="{{banneritem.img}}" alt="">
+                    <h3>{{banneritem.title}}</h3>
+                    <a href="" class="btn btn-primary" ng-click="select(banneritem, 'banner')">Select</a>
                 </div>
-            </tab>
-            <tab heading="Body">
-                <br>
-                <h4>
-                    <div  class="alert alert-info">Selected Item: <span class="label label-success" ng-repeat="body in selected.bodyitemx">{{body.title}}</span></div>
-                </h4>
-                <div class="row">
-                    <div class="col-md-4" ng-repeat="bodyitem in bodyitems" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
-                        <img src="{{bodyitem.img}}" alt="">
-                        <h3>{{bodyitem.title}}</h3>
-                        <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body')">Select</a>
-                    </div>
+            </div>
+        </tab>
+        <tab heading="Body">
+            <br>
+            <h4>
+                <div  class="alert alert-info">Selected Item: <span class="label label-success" ng-repeat="body in selected.bodyitemx">{{body.title}}</span></div>
+            </h4>
+            <div class="row">
+                <div class="col-md-4" ng-repeat="bodyitem in bodyitems" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
+                    <img src="{{bodyitem.img}}" alt="">
+                    <h3>{{bodyitem.title}}</h3>
+                    <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body')">Select</a>
                 </div>
-            </tab>
-            <tab heading="Final HTML">
-                <pre>
-                    <html-template id="clipboard-text"></html-template>
-                </pre>
-            </tab>
-            <tab heading="Layout CSS">
-                <pre>
-                    <css-template id="clipboard-text-css"></css-template>
-                </pre>
-            </tab>
-            <tab heading="Page CSS">
-                <pre>
-                    <csspage-template id="clipboard-text-css2"></csspage-template>
-                </pre>
-            </tab>
-            <tab heading="Modules CSS">
-                <pre>
-                    <cssmodules-template id="clipboard-text-css3"></cssmodules-template>
-                </pre>
-            </tab>
-          </tabset>
-        </div>
+            </div>
+        </tab>
+        <tab heading="Final HTML">
+            <pre>
+                <html-template id="clipboard-text"></html-template>
+            </pre>
+        </tab>
+        <tab heading="Layout CSS">
+            <pre>
+                <css-template id="clipboard-text-css"></css-template>
+            </pre>
+        </tab>
+        <tab heading="Page CSS">
+            <pre>
+                <csspage-template id="clipboard-text-css2"></csspage-template>
+            </pre>
+        </tab>
+        <tab heading="Modules CSS">
+            <pre>
+                <cssmodules-template id="clipboard-text-css3"></cssmodules-template>
+            </pre>
+        </tab>
+      </tabset>
 
     </div><!-- .row -->
 </div>

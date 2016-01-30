@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp" ng-controller="HTMLController as vm">
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -11,7 +11,7 @@
     <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body ng-app="myApp" ng-controller="BaseController" ng-class="pageClass('')">
+<body ng-class="pageClass('')">
 <header>
     <nav class="navbar">
         <div class="container">
@@ -27,7 +27,7 @@
 
 <div class="main-header container text-center">
     <h1>Code Snipp <small>- Jolan Green</small></h1>
-    <button id="target-to-copy" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text" data-clipboard-text="Default clipboard">Copy HTML</button>
+    <button class="my_clip_button btn btn-danger" ng-click="vm.download()">Download HTML</button>
     <button id="target-to-copy-css" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css" data-clipboard-text="Default clipboard">Copy CSS Layout</button>
     <button id="target-to-copy-css2" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css2" data-clipboard-text="Default clipboard">Copy CSS Page</button>
     <button id="target-to-copy-css3" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css3" data-clipboard-text="Default clipboard">Copy CSS Modules</button>
@@ -40,6 +40,9 @@
 </div>
 <div class="clear"></div>
 
+<pre id="HTMLContent" style="display:none;">
+    <html-template id="clipboard-text"></html-template>
+</pre>
 
 <script src="assets/js/scripts.js"></script>
 

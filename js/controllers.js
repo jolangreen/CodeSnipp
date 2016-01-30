@@ -28,17 +28,12 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
 
 }]);
 
+
 /////////////////////
 // Home Controller //
 /////////////////////
-myApp.controller('HomeController', ['$scope', '$timeout', '$modal', '$log', function($scope, $timeout, $modal, $log){
 
-
-}]);
-
-
-
-myApp.controller('HTMLController', function ($scope, $modal, $log) {
+myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Blob) {
 
     $scope.headeritems = [
         {
@@ -217,35 +212,19 @@ myApp.controller('HTMLController', function ($scope, $modal, $log) {
         };
     };
 
-});
 
+    var vm = this;
 
-
-/*
-myApp.controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
-
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
-
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
-
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-});
-*/
-
-myApp.controller('TabsDemoCtrl', function ($scope, $window) {
-  $scope.tabs = [
-    { title:'Dynamic Title 1', content:'Dynamic content 1' },
-    { title:'Dynamic Title 2', content:'Dynamic content 2', disabled: true }
-  ];
+    vm.download = function() {
+        var htmlContent = $('#HTMLContent').text();
+        var data = new Blob([htmlContent], { type: 'text/plain;charset=utf-8' });
+        FileSaver.saveAs(data, 'page.html');
+    };
 
 });
+
+
+
 
 myApp.controller('PhpController', ['$scope', '$timeout', function($scope, $timeout){
     $scope.oneAtATime = true;

@@ -4,6 +4,7 @@
   "description": "This is a test",
   "main": "gulpfile.js",
   "dependencies": {
+    "angular-file-saver": "^1.0.2",
     "gulp": "^3.8.6",
     "gulp-autoprefixer": "^0.0.8",
     "gulp-ruby-sass": "^0.6.0",
