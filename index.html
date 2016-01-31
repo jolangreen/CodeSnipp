@@ -27,10 +27,7 @@
 
 <div class="main-header container text-center">
     <h1>Code Snipp <small>- Jolan Green</small></h1>
-    <button class="my_clip_button btn btn-danger" ng-click="vm.download()">Download HTML</button>
-    <button id="target-to-copy-css" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css" data-clipboard-text="Default clipboard">Copy CSS Layout</button>
-    <button id="target-to-copy-css2" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css2" data-clipboard-text="Default clipboard">Copy CSS Page</button>
-    <button id="target-to-copy-css3" class="my_clip_button btn btn-primary" data-clipboard-target="clipboard-text-css3" data-clipboard-text="Default clipboard">Copy CSS Modules</button>
+    <button class="my_clip_button btn btn-primary" ng-click="vm.download()">Download HTML</button>
 </div>
 
 <!-- Main Content
@@ -41,8 +38,21 @@
 <div class="clear"></div>
 
 <pre id="HTMLContent" style="display:none;">
-    <html-template id="clipboard-text"></html-template>
+    <html-template></html-template>
 </pre>
+
+<pre id="CSSLayoutContent" style="display:none;">
+    <css-template></css-template>
+</pre>
+
+<pre id="CSSPageContent" style="display:none;">
+    <csspage-template></csspage-template>
+</pre>
+
+<pre id="CSSModulesContent" class="hide">
+    <cssmodules-template></cssmodules-template>
+</pre>
+
 
 <script src="assets/js/scripts.js"></script>
 

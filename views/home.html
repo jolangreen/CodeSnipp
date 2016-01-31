@@ -21,7 +21,7 @@
         <tab heading="Footer">
             <br>
             <h4>
-                <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.footer.title }}</span> <span class="label label-primary pull-right">Edit Section</span></div>
+                <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.footer.title }}</span></div>
             </h4>
             <div class="row">
                 <div class="col-md-4" ng-repeat="footeritem in footeritems" ng-class="{active: selected.footer == footeritem}">
@@ -56,26 +56,6 @@
                     <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body')">Select</a>
                 </div>
             </div>
-        </tab>
-        <tab heading="Final HTML">
-            <pre>
-                <html-template id="clipboard-text"></html-template>
-            </pre>
-        </tab>
-        <tab heading="Layout CSS">
-            <pre>
-                <css-template id="clipboard-text-css"></css-template>
-            </pre>
-        </tab>
-        <tab heading="Page CSS">
-            <pre>
-                <csspage-template id="clipboard-text-css2"></csspage-template>
-            </pre>
-        </tab>
-        <tab heading="Modules CSS">
-            <pre>
-                <cssmodules-template id="clipboard-text-css3"></cssmodules-template>
-            </pre>
         </tab>
       </tabset>
 

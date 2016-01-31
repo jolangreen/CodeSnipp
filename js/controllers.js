@@ -62,7 +62,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         },
         {
             title: 'Fifth Item',
-            img: 'assets/images/sample-img.jpg',
+            img: 'assets/images/header/header5.jpg',
             html: 'views/partials/html/header/header5.html',
             css: 'views/partials/css/header/header5.html'
         },
@@ -217,11 +217,24 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
 
     vm.download = function() {
         var htmlContent = $('#HTMLContent').text();
+        var cssLayoutContent = $('#CSSLayoutContent').text();
+        var cssPageContent = $('#CSSPageContent').text();
+        var cssModulesContent = $('#CSSModulesContent').text();
         var data = new Blob([htmlContent], { type: 'text/plain;charset=utf-8' });
-        FileSaver.saveAs(data, 'page.html');
+        var data2 = new Blob([cssLayoutContent], { type: 'text/plain;charset=utf-8' });
+        var data3 = new Blob([cssPageContent], { type: 'text/plain;charset=utf-8' });
+        var data4 = new Blob([cssModulesContent], { type: 'text/plain;charset=utf-8' });
+        FileSaver.saveAs(data, 'index.html');
+        FileSaver.saveAs(data2, '_layout.sass');
+        FileSaver.saveAs(data3, '_page-all.sass');
+        FileSaver.saveAs(data4, '_modules.sass');
+        //var data = new Blob([allContent], { type: 'aplication/zip' });
+        //FileSaver.saveAs(data, 'files.zip');
     };
 
 });
+
+
 
 
 
