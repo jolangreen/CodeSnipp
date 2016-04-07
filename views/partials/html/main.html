@@ -27,7 +27,7 @@
 </xmp><div ng-include="selected.banner.html"></div><xmp>
 <!-- end BANNER -->
 </xmp><div ng-include="selected.cta.html"></div><xmp>
-</xmp><div ng-repeat="body in selected.bodyitemx"><div ng-include="body.html"></div></div><xmp>
+</xmp><div ng-repeat="body in selected.bodyitemx track by $index"><div ng-include="body.html"></div></div><xmp>
 </main>
 <div class="clear"></div>
 
