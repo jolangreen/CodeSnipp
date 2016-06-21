@@ -1,0 +1,86 @@
+<section>
+  <div class="container">
+    <h1>Javascript</h1>
+
+    <div class="well">
+      http://stackoverflow.com/questions/12077859/difference-between-this-and-event-target
+    </div>
+    
+
+<p>
+  <code>this</code> - The DOM element the listener was attached to.<br/>
+  To get the desired functionality you must wrap it in a jQuery object like: <code>$(this)</code>
+</p>
+<hr>
+
+
+<p>
+  <code>$(event.target)</code> - The actual DOM element that was clicked
+</p>
+<hr>
+
+
+<p>
+  <code>.replaceWith()</code> - Removes content from the DOM and inserts new content in its place
+</p>
+<pre>
+  $( "div.second" ).replaceWith( "&lt;h2>New heading&lt;/h2>" );
+</pre>
+<hr>
+
+
+<p>
+  <code>.filter()</code> - Use filter() to select a specified set of elements
+</p>
+<pre>
+  &lt;ul>
+  &lt;li>&lt;/li>
+  &lt;li class="middle">&lt;/li>
+  &lt;li>&lt;/li>
+  &lt;/ul>
+  $("li").filter(".middle").css( "border-color", "red" );
+</pre>
+<hr>
+
+
+
+<div class="well">
+  <code>
+  .each()<br/>
+
+  .attr('src', 'test.jpg')<br/>
+  .removeAttr()<br/>
+  .data()<br/>
+  
+  .parent() .children() .find()<br/>
+  .blur()  .focus()<br/>
+  .val()<br/>
+
+
+  .append()<br/>
+  .prepend()<br/>
+  .html()<br/>
+  .text()<br/>
+  .replaceWith()<br/>
+  .unwrap<br/>
+  .wrap()<br/>
+
+  
+  .event.preventDefault()<br/>
+  .event.target<br/>
+
+  .filter()<br/>
+  .has()<br/>
+
+  .height()<br/>
+  .length()<br/>
+  .scrollTop()<br/>
+  
+  
+  
+  </code>
+</div>
+
+  </div>
+</section>
+Searching DOM
