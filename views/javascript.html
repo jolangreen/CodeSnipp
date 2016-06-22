@@ -2,6 +2,9 @@
   pre {
     color: #529026;
   }
+  hr {
+    margin: 40px 0;
+  }
 </style>
 
 <section>
@@ -15,7 +18,7 @@
       http://stackoverflow.com/questions/730916/whats-the-difference-between-jquerys-replacewith-and-html
     </div>
     
-
+<h3>Targeting Elements</h3>
 <p>
   <code>this</code> - The DOM element the listener was attached to.<br/>
   To get the desired functionality you must wrap it in a jQuery object like: <code>$(this)</code>
@@ -29,11 +32,70 @@
 <hr>
 
 
+<h3>Traversing the DOM</h3>
+<code>closest()</code> - Selects the first element that matches the selector, up from the DOM tree.
+<hr>
+<code>parent()</code> - Selects one element up the DOM tree.
+<hr>
+<code>parents()</code> - Method is similar to parent() but selects all the matching elements up the DOM tree.
+<hr>
+
+
+<h3>Inserting / Changing / Removing DOM Elements</h3>
+<p>
+  <code>.text()</code> - Replaces the contents of the DOM element as plain text
+</p>
+Doing:
+<pre>
+  &lt;div id="mydiv">Hello World&lt;/div>
+
+  $('#mydiv').text('Aloha World');
+</pre>
+Result:
+<pre>
+  &lt;div id="mydiv">Aloha World&lt;/div>
+</pre>
+<hr>
+
+
+<p>
+  <code>.html()</code> - Replaces the contents of the DOM element and the ability to add HTML characters 
+</p>
+Doing:
+<pre>
+  &lt;div id="mydiv">Hello World&lt;/div>
+
+  $('#mydiv').html('Aloha World');
+</pre>
+Result:
+<pre>
+  &lt;div id="mydiv">Aloha World&lt;/div>
+</pre>
+<hr>
+
+
 <p>
   <code>.replaceWith()</code> - Removes content from the DOM and inserts new content in its place
 </p>
+Doing:
 <pre>
-  $( "div.second" ).replaceWith( "&lt;h2>New heading&lt;/h2>" );
+  &lt;div id="mydiv">Hello World&lt;/div>
+
+  $('#mydiv').replaceWith('Aloha World');
+</pre>
+Result:
+<pre>
+  Aloha World
+</pre>
+<hr>
+
+
+<p>
+  <code>.replace()</code> - Searches a string for a specified value and replaces it with value provided
+</p>
+<pre>
+  var str = "Visit Microsoft!";
+  var res = str.replace("Microsoft", "W3Schools");
 </pre>
 <hr>
 
@@ -60,16 +122,18 @@
   .attr('src', 'test.jpg')<br/>
   .removeAttr()<br/>
   .data()<br/>
-  
-  .parent() .children() .find()<br/>
   .blur()  .focus()<br/>
   .val()<br/>
+  
+  .parent() .children() .find()<br/>
+  
 
 
   .append()<br/>
   .prepend()<br/>
-  .html()<br/>
   .text()<br/>
+  .html()<br/>
+  .replace()<br/>
   .replaceWith()<br/>
   .unwrap<br/>
   .wrap()<br/>
@@ -92,4 +156,3 @@
 
   </div>
 </section>
-Searching DOM
