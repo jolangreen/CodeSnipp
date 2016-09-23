@@ -42,6 +42,8 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
 <hr>
 <code>.children()</code> - Selects all the matching elements down the DOM tree.
 <hr>
+<code>.siblings()</code> - Find element on same level
+<hr>
 
 
 <h3>Inserting / Changing / Removing DOM Elements</h3>
@@ -131,6 +133,33 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
 </div>
 <hr>
 
+<code>.prepend()</code> -  Insert content to the beginning of the main element
+<hr>
+
+<code>.append()</code> -  Insert content to the end of the main element
+<hr>
+
+
+<h3>Returning Data From Elements</h3>
+<p>
+  <code>.data()</code> - The data() method attaches data to, or gets data from, selected elements
+  <a href="" ng-click="expandView6 = !expandView6"><i class="glyphicon glyphicon-info-sign"></i></a>
+</p>
+<div ng-show="expandView6">
+  Doing:
+  <pre>
+    &lt;a href="#" id="mydiv" data-example="Goodbye">Hello World&lt;/a>
+    &lt;div id="result">&lt;/div>
+
+    var newGreeting = $('#mydiv').data('example');
+    $('#result').text(newGreeting);
+  </pre>
+  Result:
+  <pre>
+    &lt;div id="result">Goodbye&lt;/div>
+  </pre>
+</div>
+<hr>
 
 
 <div class="well">
@@ -158,6 +187,9 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
   .prependTo()<br/>
   .insertBefore()<br />
   .insertAfter()<br />
+  
+  .animate({height: "20px"}, 500)<br/>
+  
   
   </code>
 </div>
