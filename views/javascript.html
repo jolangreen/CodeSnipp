@@ -160,6 +160,26 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
   </pre>
 </div>
 <hr>
+    
+    
+<h3>Animating Elements</h3>
+<p>
+  <code>.animate()</code> - Create animation effects on any numeric CSS property
+  <a href="" ng-click="expandView7 = !expandView7"><i class="glyphicon glyphicon-info-sign"></i></a>
+</p>
+<div ng-show="expandView7">
+  Doing:
+  <pre>
+    $('#mydiv').animate({height: "20px"}, 500);
+    
+    
+  </pre>
+</div>
+<hr>
+<code>.slideDown() / .slideUp()</code> - Display the matched elements with a sliding motion
+<hr>
+<code>.fadeIn() / .fadeOut()</code> - Display the matched elements by fading them to opaque
+<hr>
 
 
 <div class="well">
@@ -187,8 +207,7 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
   .prependTo()<br/>
   .insertBefore()<br />
   .insertAfter()<br />
-  
-  .animate({height: "20px"}, 500)<br/>
+
   
   
   </code>
