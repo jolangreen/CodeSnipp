@@ -26,7 +26,7 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
 <code>$(event.target)</code> - The actual DOM element that was clicked
 <hr>
 
-<code>.event.preventDefault()</code> - The default action of the event will not be triggered
+<code>event.preventDefault()</code> - The default action of the event will not be triggered
 <hr>
 
 
@@ -138,6 +138,12 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
 
 <code>.append()</code> -  Insert content to the end of the main element
 <hr>
+    
+<code>.prependTo()</code> -  Insert specific element to the beginning of a targeted element
+<hr>
+
+<code>.appendTo()</code> -  Insert specific element to the end of a targeted element
+<hr>
 
 
 <h3>Returning Data From Elements</h3>
@@ -171,8 +177,6 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
   Doing:
   <pre>
     $('#mydiv').animate({height: "20px"}, 500);
-    
-    
   </pre>
 </div>
 <hr>
@@ -192,8 +196,6 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
   .blur()  .focus()<br/>
   .val()<br/>
 
-  .append()<br/>
-  .prepend()<br/>
   .unwrap<br/>
   .wrap()<br/>
 
@@ -208,8 +210,6 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
   .insertBefore()<br />
   .insertAfter()<br />
 
-  
-  
   </code>
 </div>
 
