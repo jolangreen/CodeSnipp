@@ -107,6 +107,19 @@ while ( $loop->have_posts() ) : $loop->the_post(); ?>
 <?php wp_nav_menu( array('menu' => 'footer', 'after' => '' )); ?></xmp>
 </accordion-group>
 
+<accordion-group heading="Contact Form 7 Basic Form">
+<xmp>
+[text* your-name placeholder "Your Name*"]
+
+[email* your-email placeholder "Your Email*"]
+
+[text your-phone placeholder "Your Phone"]
+
+[textarea your-message placeholder "Your Message"]
+
+[submit "Submit"]
+</xmp>
+</accordion-group>
 
 </accordion>
 

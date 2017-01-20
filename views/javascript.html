@@ -185,6 +185,23 @@ To get the desired functionality you must wrap it in a jQuery object like: <code
 <code>.fadeIn() / .fadeOut()</code> - Display the matched elements by fading them to opaque
 <hr>
 
+ 
+<h3>Detect Window Size</h3>
+<p>
+  <code>$(window).width()</code> - Get width of browser window
+  <a href="" ng-click="expandView8 = !expandView8"><i class="glyphicon glyphicon-info-sign"></i></a>
+</p>
+<div ng-show="expandView8">
+  Doing:
+  <pre>
+    if ($(window).width() > 769) {
+       // Add this if window is greater than 769
+    }
+  </pre>
+</div>
+<hr>
+    
+    
 
 <div class="well">
   <code>

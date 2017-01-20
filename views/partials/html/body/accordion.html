@@ -1,0 +1,28 @@
+<xmp>
+<?php if( have_rows('faq_section') ): ?>
+                                
+    <?php $counter = 0; ?>
+
+    <?php while( have_rows('faq_section') ): the_row(); ?>
+        <div class="panel panel-default">
+            <div class="panel-heading" id="panelHeading<?php echo $counter; ?>">
+                <h3 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapsePanel<?php echo $counter ?>" aria-expanded="false" aria-controls="collapsePanel<?php echo $counter ?>">
+                    <?php the_sub_field('faq_title'); ?>
+                  </a>
+
+                </h3>
+            </div>
+            <div id="collapsePanel<?php echo $counter ?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="panelHeading<?php echo $counter ?>">
+                <div class="panel-body">
+                  <?php the_sub_field('faq_content_text'); ?>
+                </div>
+            </div>
+        </div>
+
+        <?php $counter++; ?>
+
+    <?php endwhile; ?>
+
+<?php endif; ?>
+</xmp>
