@@ -20,7 +20,13 @@
 <h3>Targeting Elements</h3>
 
 <code>this</code> - The DOM element the listener was attached to.<br/>
-To get the desired functionality you must wrap it in a jQuery object like: <code>$(this)</code>
+To get the desired functionality you must wrap it in a jQuery object like: <code>$(this)</code> 
+<a href="" ng-click="expandThis = !expandThis"><i class="glyphicon glyphicon-info-sign"></i></a>
+<div ng-show="expandThis">
+  <pre>
+  &lt;a href="javascript:void(0);" onclick="btnUpdateCart('argument1',this);" >
+  </pre>
+</div>
 <hr>
 
 <code>$(event.target)</code> - The actual DOM element that was clicked

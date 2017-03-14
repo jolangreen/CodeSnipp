@@ -15,6 +15,7 @@
 <accordion-group heading="If Page">
 <xmp><?php if(is_page('home')){ ?>
 <?php } elseif(is_page('services') OR $post->post_parent == '14' ): { ?>
+<?php } elseif(is_page(9) || $post->post_parent == 9 ) { ?>
 <?php } else { ?>
 <?php } ?></xmp>
 </accordion-group>
