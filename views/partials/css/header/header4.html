@@ -10,7 +10,7 @@ header
             line-height: 0
 
         .logo a
-            background: image-url("logo.png") no-repeat center $clrBrightest
+            background: image-url("logo.png") no-repeat center $color-brightest
             display: block
             height: 180px
             left: 0
@@ -21,18 +21,18 @@ header
 
 /*___________________________ NAVIGATION ___________________________*/
 nav.navbar
-    background: $clrBackground
+    background: $color-background
     border: none
     +border-radius(0)
     margin-bottom: 0
     text-align: center
 
     a, a:visited
-        color: $clrText
+        color: $color-text
 
     //Adjust Nav Bar BG Color
     .navbar-collapse
-        background: $clrDark
+        background: $color-dark
 
     .nav
         margin: 6px 0
@@ -46,13 +46,13 @@ nav.navbar
                 +font(17px)
                 &:after
                     margin-left: 22px
-                    color: $clrBright
+                    color: $color-bright
                     content: "/"
                 &:after:last-of-type
                     content: ""
                 &:hover
                     background: transparent
-                    color: $clrPrimary
+                    color: $color-primary
                     text-decoration: none
 
         //Active State --
@@ -61,7 +61,7 @@ nav.navbar
         .current_page_ancestor > a,
         .current-menu-item > a,
         .current-menu-ancestor > a
-            color: $clrBright
+            color: $color-bright
             font-weight: bold
             text-decoration: none
 </xmp>

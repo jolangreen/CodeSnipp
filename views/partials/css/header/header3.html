@@ -10,7 +10,7 @@ header
             line-height: 0
 
         .logo a
-            background: image-url("logo.png") no-repeat center $clrBright
+            background: image-url("logo.png") no-repeat center $color-bright
             display: block
             height: 180px
             left: 0
@@ -32,9 +32,9 @@ header
         left: -28px
         position: relative
         top: 0px
-        color: $clrMedium
+        color: $color-Medium
     input[type="submit"]
-        background: $clrPrimary
+        background: $color-primary
         height: 28px
         margin-left: -12px
         padding: 2px 8px
@@ -42,17 +42,17 @@ header
 
 /*___________________________ NAVIGATION ___________________________*/
 nav.navbar
-    background: $clrBackground
+    background: $color-background
     +border-radius(0)
     margin-bottom: 0
     text-align: center
 
     a, a:visited
-        color: $clrBright
+        color: $color-bright
 
     //Adjust Nav Bar BG Color
     .navbar-collapse
-        background: $clrDark
+        background: $color-dark
 
     .nav
         margin: 6px 0
@@ -66,13 +66,13 @@ nav.navbar
                 +font(17px)
                 &:after
                     margin-left: 22px
-                    color: $clrText
+                    color: $color-text
                     content: "|"
                 &:after:last-of-type
                     content: ""
                 &:hover
                     background: transparent
-                    color: $clrPrimary
+                    color: $color-primary
                     text-decoration: none
 
 
