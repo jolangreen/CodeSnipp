@@ -27922,6 +27922,38 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
 
 myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Blob) {
 
+    $scope.fontitems = [
+        {
+            title: 'Open Sans',
+            img: null,
+            html: null,
+            css: 'views/partials/css/fontprimary/opensans.html',
+            css2: 'views/partials/css/fontsecondary/opensans.html'
+        },
+        {
+            title: 'Georgia',
+            img: null,
+            html: null,
+            css: 'views/partials/css/fontprimary/georgia.html',
+            css2: 'views/partials/css/fontsecondary/georgia.html'
+        },
+        {
+            title: 'Arial',
+            img: null,
+            html: null,
+            css: 'views/partials/css/fontprimary/arial.html',
+            css2: 'views/partials/css/fontsecondary/arial.html'
+        },
+        {
+            title: 'Myriad Pro',
+            img: null,
+            html: null,
+            css: 'views/partials/css/fontprimary/myriadpro.html',
+            css2: 'views/partials/css/fontsecondary/myriadpro.html'
+        },
+    ];
+
+
     $scope.headeritems = [
         {
             title: 'Logo Left - Nav Right',
@@ -28107,16 +28139,23 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         var cssLayoutContent = $('#CSSLayoutContent').text();
         var cssPageContent = $('#CSSPageContent').text();
         var cssModulesContent = $('#CSSModulesContent').text();
+        var CSSStyleContent = $('#CSSStyleContent').text();
+        var CSSBaseContent = $('#CSSBaseContent').text();
         var data = new Blob([htmlContent], { type: 'text/plain;charset=utf-8' });
         var data2 = new Blob([cssLayoutContent], { type: 'text/plain;charset=utf-8' });
         var data3 = new Blob([cssPageContent], { type: 'text/plain;charset=utf-8' });
         var data4 = new Blob([cssModulesContent], { type: 'text/plain;charset=utf-8' });
+        var data5 = new Blob([CSSStyleContent], { type: 'text/plain;charset=utf-8' });
+        var data6 = new Blob([CSSBaseContent], { type: 'text/plain;charset=utf-8' });
+        // Need to take these files and put it on the server in 'preview' folder
         FileSaver.saveAs(data, 'index.html');
         FileSaver.saveAs(data2, '_layout.sass');
         FileSaver.saveAs(data3, '_page-all.sass');
         FileSaver.saveAs(data4, '_modules.sass');
-        //var data = new Blob([allContent], { type: 'aplication/zip' });
-        //FileSaver.saveAs(data, 'files.zip');
+        FileSaver.saveAs(data5, 'style.scss');
+        FileSaver.saveAs(data6, '_base.sass');
+        var dataFull = new Blob([allContent], { type: 'aplication/zip' });
+        FileSaver.saveAs(dataFull, 'files.zip');
     };
 
 });
@@ -28187,6 +28226,20 @@ myApp.directive('cssmodulesTemplate', function(){
     return {
         restrict: 'AE',
         templateUrl: 'views/partials/css/modules.html'
+    }
+}),
+
+myApp.directive('cssstyleTemplate', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: 'views/partials/css/style.html'
+    }
+}),
+
+myApp.directive('cssbaseTemplate', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: 'views/partials/css/base.html'
     }
 }),
 
