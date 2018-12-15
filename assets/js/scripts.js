@@ -27922,6 +27922,16 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
 
 myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Blob) {
 
+    $scope.colors = [
+        {
+            primary: 'test',
+            img: null,
+            html: null,
+            css: 'views/partials/css/fontprimary/opensans.html',
+            css2: 'views/partials/css/fontsecondary/opensans.html'
+        },
+    ];
+
     $scope.fontitems = [
         {
             title: 'Open Sans',

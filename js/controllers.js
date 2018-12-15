@@ -35,34 +35,13 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
 
 myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Blob) {
 
-    $scope.colorPrimaryitems = [
+    $scope.colors = [
         {
-            Primary Color: '',
+            primary: 'test',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/opensans.html',
             css2: 'views/partials/css/fontsecondary/opensans.html'
-        },
-        {
-            title: 'Georgia',
-            img: null,
-            html: null,
-            css: 'views/partials/css/fontprimary/georgia.html',
-            css2: 'views/partials/css/fontsecondary/georgia.html'
-        },
-        {
-            title: 'Arial',
-            img: null,
-            html: null,
-            css: 'views/partials/css/fontprimary/arial.html',
-            css2: 'views/partials/css/fontsecondary/arial.html'
-        },
-        {
-            title: 'Myriad Pro',
-            img: null,
-            html: null,
-            css: 'views/partials/css/fontprimary/myriadpro.html',
-            css2: 'views/partials/css/fontsecondary/myriadpro.html'
         },
     ];
 
