@@ -5,6 +5,28 @@
     <div class="row">
 
       <tabset>
+        <tab heading="Settings">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Colors</h3>
+                    <div class="color-setting">
+                        <label>Primary Color: </label> <span class="text-muted">#</span><input type="text" max="6">
+                    </div>
+                    <div class="color-setting">
+                        <label>Secondary Color: </label> <span class="text-muted">#</span><input type="text" max="6">
+                    </div>
+                    <div class="color-setting">
+                        <label>Text Color: </label> <span class="text-muted">#</span><input type="text" max="6">
+                    </div>
+                    <hr>
+                    <h3>Font</h3>
+                    <div class="font-setting" ng-repeat="fontitem in fontitems" ng-class="{active: selected.font == fontitem}">
+                        <input type="radio" name="primary" ng-click="select(fontitem, 'font')"> <label>{{fontitem.title}}</label>
+                    </div>
+                    <hr>
+                </div>
+            </div>
+        </tab>
         <tab heading="Header">
             <br>
             <h4>
@@ -15,6 +37,7 @@
                     <img src="{{headeritem.img}}" alt="">
                     <h3>{{headeritem.title}}</h3>
                     <a href="" class="btn btn-primary" ng-click="select(headeritem, 'header')">Select</a>
+                    <a href="#" class="btn btn-primary">Copy</a>
                 </div>
             </div>
         </tab>
@@ -53,6 +76,7 @@
                 <div class="col-md-4" ng-repeat="bodyitem in bodyitems track by $index" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
                     <img src="{{bodyitem.img}}" alt="">
                     <h3>{{bodyitem.title}}</h3>
+                    <div><input type="checkbox"> Background Color</div>
                     <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body')">Select</a>
                 </div>
             </div>

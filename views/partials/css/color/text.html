@@ -1,0 +1,76 @@
+<xmp>
+.banner
+    overflow: hidden
+    padding: 0
+    position: relative
+    /* margin-top: -95px */
+
+.carousel
+
+    .container
+        position: relative
+        z-index: 9
+
+    .down-button
+        bottom: 40px
+        height: 80px
+        left: 47.5%
+        position: absolute
+        width: 80px
+        z-index: 10
+        color: $clrBrightest
+        +font(30px)
+        line-height: 80px
+
+    .item
+        height: 700px
+
+        img
+            height: 100%
+            left: 0
+            min-width: 100%
+            position: absolute
+            top: 0
+
+    .carousel-caption
+        background-color: transparent
+        margin: 0 auto
+        top: 20%
+        width: 600px
+
+        h1, .carousel-caption p
+            margin: 0
+            color: #fff
+            line-height: 1.25
+            text-shadow: 0 1px 1px rgba(0,0,0,.4)
+
+        h1
+            +font(50px)
+        p
+            +font(22px)
+        a.btn
+            background-color: transparent
+            border: 2px solid $clrBrightest
+            margin-top: 15px
+            padding: 10px 20px
+            color: $clrBrightest
+            +font(20px)
+            text-transform: uppercase
+
+
+    .carousel-control
+        z-index: 5
+
+        .glyphicon-chevron-left, .glyphicon-chevron-right
+            background: $clrDarkest
+            height: 80px
+            top: 44%
+            width: 50px
+            color: $clrBrightest
+            line-height: 77px
+
+        .glyphicon-chevron-left
+            left: 0
+        .glyphicon-chevron-right
+            right: 0
+</xmp>

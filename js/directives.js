@@ -28,3 +28,17 @@ myApp.directive('cssmodulesTemplate', function(){
     }
 }),
 
+myApp.directive('cssstyleTemplate', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: 'views/partials/css/style.html'
+    }
+}),
+
+myApp.directive('cssbaseTemplate', function(){
+    return {
+        restrict: 'AE',
+        templateUrl: 'views/partials/css/base.html'
+    }
+}),
+

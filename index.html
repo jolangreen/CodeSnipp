@@ -28,7 +28,8 @@
 
 <div class="main-header container text-center">
     <h1>Code Snipp <small>- Jolan Green</small></h1>
-    <button class="my_clip_button btn btn-primary" ng-click="vm.download()">Download HTML</button>
+    <button class="my_clip_button btn btn-primary" ng-click="vm.download()">Download HTML/CSS</button>
+    <button class="btn btn-primary" ng-click="preview()" disabled="disabled">Preview</button>
 </div>
 
 <!-- Main Content
@@ -52,6 +53,14 @@
 
 <pre id="CSSModulesContent" class="hide">
     <cssmodules-template></cssmodules-template>
+</pre>
+
+<pre id="CSSStyleContent" class="hide">
+    <cssstyle-template></cssstyle-template>
+</pre>
+
+<pre id="CSSBaseContent" class="hide">
+    <cssbase-template></cssbase-template>
 </pre>
 
 

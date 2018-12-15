@@ -4,3 +4,4 @@ bower_components
 node_modules
 code_samples
 sftp-config.json
+.vscode
