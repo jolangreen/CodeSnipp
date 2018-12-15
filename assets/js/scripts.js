@@ -27924,15 +27924,8 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
 
     
 
-    /*$scope.colors = [
-        {
-            primary: 'test',
-            img: null,
-            html: null,
-            css: 'views/partials/css/fontprimary/opensans.html',
-            css2: 'views/partials/css/fontsecondary/opensans.html'
-        },
-    ];*/
+    $scope.colors = { css: 'views/partials/css/color/colors.html' }
+    
 
     $scope.fontitems = [
         {
@@ -28127,14 +28120,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             css: null
         },
     ];
-
-    $scope.colors = [
-        {
-            css: 'views/partials/css/color/primary.html'
-        }
-    ];
-
-    //$scope.colors['col'] = colors;
+    
 
 
     //Select Items
@@ -28154,7 +28140,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
 
 
     $scope.preview = function() {
-        console.log($scope.colors);
+      console.log('Preview Clicked');
     };
 
     var vm = this;
