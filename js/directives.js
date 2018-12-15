@@ -17,7 +17,7 @@ myApp.directive('cssTemplate', function(){
 myApp.directive('csspageTemplate', function(){
     return {
         restrict: 'AE',
-        templateUrl: 'views/partials/css/page-all.html'
+        templateUrl: 'views/partials/css/pages.html'
     }
 }),
 

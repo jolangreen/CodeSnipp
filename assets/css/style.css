@@ -15,3 +15,6 @@
 .alert .label { margin: 0 3px; display: inline-block; }
 
 .label:empty { display: none !important; }
+
+.color-setting label { width: 130px; }
+.color-setting input[type="text"] { width: 80px; }

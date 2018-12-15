@@ -67,4 +67,13 @@ $fontSecondary: 'HelveticaNeueThin', Arial, Helvetica, Sans-serif;
     display: none !important;
 }
 
+.color-setting {
+    label {
+        width: 120px;
+    }
+    input[type="text"] {
+        width: 80px;
+    }
+}
+
 @import "compass/css3";

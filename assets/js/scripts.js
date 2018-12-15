@@ -27922,7 +27922,9 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
 
 myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Blob) {
 
-    $scope.colors = [
+    
+
+    /*$scope.colors = [
         {
             primary: 'test',
             img: null,
@@ -27930,7 +27932,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             css: 'views/partials/css/fontprimary/opensans.html',
             css2: 'views/partials/css/fontsecondary/opensans.html'
         },
-    ];
+    ];*/
 
     $scope.fontitems = [
         {
@@ -27945,14 +27947,14 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/georgia.html',
-            css2: 'views/partials/css/fontsecondary/georgia.html'
+            css2: ''
         },
         {
             title: 'Arial',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/arial.html',
-            css2: 'views/partials/css/fontsecondary/arial.html'
+            css2: ''
         },
         {
             title: 'Myriad Pro',
@@ -28126,6 +28128,14 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         },
     ];
 
+    $scope.colors = [
+        {
+            css: 'views/partials/css/color/primary.html'
+        }
+    ];
+
+    //$scope.colors['col'] = colors;
+
 
     //Select Items
     $scope.selected = {};
@@ -28139,8 +28149,13 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         } else {
           $scope.selected[type]=item;
         };
+        console.log($scope.selected);
     };
 
+
+    $scope.preview = function() {
+        console.log($scope.colors);
+    };
 
     var vm = this;
 
@@ -28164,8 +28179,9 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         FileSaver.saveAs(data4, '_modules.sass');
         FileSaver.saveAs(data5, 'style.scss');
         FileSaver.saveAs(data6, '_base.sass');
-        var dataFull = new Blob([allContent], { type: 'aplication/zip' });
-        FileSaver.saveAs(dataFull, 'files.zip');
+        
+        //var data = new Blob([allContent], { type: 'aplication/zip' });
+        //FileSaver.saveAs(data, 'files.zip');
     };
 
 });
@@ -28228,7 +28244,7 @@ myApp.directive('cssTemplate', function(){
 myApp.directive('csspageTemplate', function(){
     return {
         restrict: 'AE',
-        templateUrl: 'views/partials/css/page-all.html'
+        templateUrl: 'views/partials/css/pages.html'
     }
 }),
 

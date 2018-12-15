@@ -10,18 +10,18 @@
                 <div class="col-md-12">
                     <h3>Colors</h3>
                     <div class="color-setting">
-                        <label>Primary Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.primary" max="6"> {{colors.primary}}
+                        <label>Primary Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.primary" maxlength="6"> {{colors.primary}}
                     </div>
                     <div class="color-setting">
-                        <label>Secondary Color: </label> <span class="text-muted">#</span><input type="text" max="6">
+                        <label>Secondary Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.secondary"maxlength="6">
                     </div>
                     <div class="color-setting">
-                        <label>Text Color: </label> <span class="text-muted">#</span><input type="text" max="6">
+                        <label>Text Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.text" maxlength="6">
                     </div>
                     <hr>
                     <h3>Font</h3>
                     <div class="font-setting" ng-repeat="fontitem in fontitems" ng-class="{active: selected.font == fontitem}">
-                        <input type="radio" name="primary" ng-click="select(fontitem, 'font')"> <label>{{fontitem.title}}</label>
+                        <input type="radio" name="font" ng-click="select(fontitem, 'font')"> <label>{{fontitem.title}}</label>
                     </div>
                     <hr>
                 </div>
@@ -76,7 +76,7 @@
                 <div class="col-md-4" ng-repeat="bodyitem in bodyitems track by $index" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
                     <img src="{{bodyitem.img}}" alt="">
                     <h3>{{bodyitem.title}}</h3>
-                    <div><input type="checkbox"> Background Color</div>
+                    <div><input type="checkbox" ng-model="checkboxModel.value1" ng-true-value="'YES'" ng-false-value="'NO'"> Background Color</div>
                     <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body')">Select</a>
                 </div>
             </div>
@@ -85,4 +85,3 @@
 
     </div><!-- .row -->
 </div>
-

@@ -35,7 +35,9 @@ myApp.controller('BaseController', ['$scope', '$location', function($scope, $loc
 
 myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Blob) {
 
-    $scope.colors = [
+    
+
+    /*$scope.colors = [
         {
             primary: 'test',
             img: null,
@@ -43,7 +45,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             css: 'views/partials/css/fontprimary/opensans.html',
             css2: 'views/partials/css/fontsecondary/opensans.html'
         },
-    ];
+    ];*/
 
     $scope.fontitems = [
         {
@@ -58,14 +60,14 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/georgia.html',
-            css2: 'views/partials/css/fontsecondary/georgia.html'
+            css2: ''
         },
         {
             title: 'Arial',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/arial.html',
-            css2: 'views/partials/css/fontsecondary/arial.html'
+            css2: ''
         },
         {
             title: 'Myriad Pro',
@@ -239,6 +241,15 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         },
     ];
 
+    $scope.colors = [
+        {
+            primary: '',
+            css: 'views/partials/css/color/primary.html'
+        }
+    ];
+
+    //$scope.colors['col'] = colors;
+
 
     //Select Items
     $scope.selected = {};
@@ -252,8 +263,13 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         } else {
           $scope.selected[type]=item;
         };
+        console.log($scope.selected);
     };
 
+
+    $scope.preview = function() {
+        console.log($scope.colors);
+    };
 
     var vm = this;
 
