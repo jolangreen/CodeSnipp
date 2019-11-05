@@ -29,8 +29,7 @@
 <div class="main-header container text-center">
     <h1>Code Snipp <small>- Jolan Green</small></h1>
     <button class="my_clip_button btn btn-primary" ng-click="vm.download()">Download HTML/CSS</button>
-    <button class="btn btn-primary" ng-click="preview()">Preview</button>
-    <!-- <button class="btn btn-primary" ng-click="preview()" disabled="disabled">Preview</button> -->
+    <button class="btn btn-primary" ng-click="preview()" disabled="disabled">Preview</button>
 </div>
 
 <!-- Main Content
@@ -40,7 +39,7 @@
 </div>
 <div class="clear"></div>
 
-<pre id="HTMLContent" style="display:none;">
+<pre id="HTMLContent">
     <html-template></html-template>
 </pre>
 
@@ -56,8 +55,8 @@
     <cssmodules-template></cssmodules-template>
 </pre>
 
-<pre id="CSSStyleContent">
-    <cssstyle-template></cssstyle-template>
+<pre id="CSSVariablesContent" class="hide">
+    <cssvariables-template></cssvariables-template>
 </pre>
 
 <pre id="CSSBaseContent" class="hide">
@@ -68,16 +67,16 @@
 
 <script src="assets/js/scripts.js"></script>
 
-<script src="assets/js/ZeroClipboard.js"></script>
+<!-- <script src="assets/js/ZeroClipboard.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf"></script>
-
+ -->
 <script>
-    $(document).ready(function() {
+    /*$(document).ready(function() {
         var clientTarget = new ZeroClipboard($("#target-to-copy, #target-to-copy-css, #target-to-copy-css2, #target-to-copy-css3"), {
             moviePath: "assets/js/ZeroClipboard.swf",
             debug: false
         });
-    });
+    });*/
 
 
     var counter = 0;

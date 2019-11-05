@@ -28,10 +28,10 @@ myApp.directive('cssmodulesTemplate', function(){
     }
 }),
 
-myApp.directive('cssstyleTemplate', function(){
+myApp.directive('cssvariablesTemplate', function(){
     return {
         restrict: 'AE',
-        templateUrl: 'views/partials/css/style.html'
+        templateUrl: 'views/partials/css/variables.html'
     }
 }),
 

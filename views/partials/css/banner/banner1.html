@@ -3,14 +3,37 @@
     overflow: hidden
     padding: 0
     position: relative
-    /* margin-top: -95px */
 
 .carousel
 
-    .container
+    .item
+        background-size: cover
+    .item-container
         position: relative
-        z-index: 9
+        z-index: 2
+        height: 700px
+        display: table
+        .row
+            display: table-cell
+            vertical-align: middle
 
+    h1, p
+        line-height: 1.25
+        text-shadow: 0 1px 1px rgba(0,0,0,.4)
+
+    h1
+        +font(50px)
+    p
+        +font($font-size-medium-large)
+    a.btn
+        background-color: transparent
+        border: 2px solid $color-brightest
+        margin-top: $spacing-small
+        padding: 10px 20px
+        color: $color-brightest
+        +font(20px)
+        text-transform: uppercase
+    
     .down-button
         bottom: 40px
         height: 80px
@@ -18,45 +41,12 @@
         position: absolute
         width: 80px
         z-index: 10
+        border-color: $color-white
         color: $color-brightest
         +font(30px)
         line-height: 80px
-
-    .item
-        height: 700px
-
-        img
-            height: 100%
-            left: 0
-            min-width: 100%
-            position: absolute
-            top: 0
-
-    .carousel-caption
-        background-color: transparent
-        margin: 0 auto
-        top: 20%
-        width: 600px
-
-        h1, .carousel-caption p
-            margin: 0
-            color: #fff
-            line-height: 1.25
-            text-shadow: 0 1px 1px rgba(0,0,0,.4)
-
-        h1
-            +font(50px)
-        p
-            +font(22px)
-        a.btn
-            background-color: transparent
-            border: 2px solid $color-brightest
-            margin-top: 15px
-            padding: 10px 20px
-            color: $color-brightest
-            +font(20px)
-            text-transform: uppercase
-
+        .fa
+            color: $color-white
 
     .carousel-control
         z-index: 5
@@ -70,7 +60,13 @@
             line-height: 77px
 
         .glyphicon-chevron-left
-            left: 0
+            left: 7px
+            &:before
+                font-family: 'fontAwesome'
+                content: '\f053'
         .glyphicon-chevron-right
-            right: 0
+            right: 7px
+            &:before
+                font-family: 'fontAwesome'
+                content: '\f054'
 </xmp>
