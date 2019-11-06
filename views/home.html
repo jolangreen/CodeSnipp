@@ -21,7 +21,7 @@
                     <hr>
                     <h3>Font</h3>
                     <div class="font-setting" ng-repeat="fontitem in fontitems" ng-class="{active: selected.font == fontitem}">
-                        <input type="radio" name="font" ng-click="select(fontitem, 'font')"> <label>{{fontitem.title}}</label>
+                        <input type="radio" name="font" ng-click="select(fontitem, 'font')" checked> <label>{{fontitem.title}}</label>
                     </div>
 
                     <hr>
