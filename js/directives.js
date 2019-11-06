@@ -10,14 +10,14 @@ myApp.directive('htmlTemplate', function(){
 myApp.directive('cssTemplate', function(){
     return {
         restrict: 'AE',
-        templateUrl: 'views/partials/css/main.html'
+        templateUrl: 'views/partials/css/layout.html'
     }
 }),
 
 myApp.directive('csspageTemplate', function(){
     return {
         restrict: 'AE',
-        templateUrl: 'views/partials/css/pages.html'
+        templateUrl: 'views/partials/css/home.html'
     }
 }),
 

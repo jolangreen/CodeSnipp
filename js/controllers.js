@@ -275,7 +275,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         // Need to take these files and put it on the server in 'preview' folder
         FileSaver.saveAs(data, 'index.html');
         FileSaver.saveAs(data2, '_layout.sass');
-        FileSaver.saveAs(data3, '_pages.sass');
+        FileSaver.saveAs(data3, '_home.sass');
         FileSaver.saveAs(data4, '_modules.sass');
         FileSaver.saveAs(data5, '_variables.scss');
         FileSaver.saveAs(data6, '_base.sass');
