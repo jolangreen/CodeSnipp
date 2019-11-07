@@ -145,6 +145,12 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             html: 'views/partials/html/banner/banner2.html',
             css: 'views/partials/css/banner/banner1.html'
         },
+        {
+            title: 'Text Left - Form Right',
+            img: 'assets/images/banner/banner2.jpg',
+            html: 'views/partials/html/banner/banner3.html',
+            css: 'views/partials/css/banner/banner3.html'
+        },
     ];
 
     $scope.bodyitems = [
