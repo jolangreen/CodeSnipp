@@ -27976,28 +27976,32 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/opensans.html',
-            css2: 'views/partials/css/fontsecondary/opensans.html'
+            css2: 'views/partials/css/fontsecondary/opensans.html',
+            checked: 'checked'
         },
         {
             title: 'Georgia',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/georgia.html',
-            css2: ''
+            css2: '',
+            checked: ''
         },
         {
             title: 'Arial',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/arial.html',
-            css2: ''
+            css2: '',
+            checked: ''
         },
         {
             title: 'Myriad Pro',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/myriadpro.html',
-            css2: 'views/partials/css/fontsecondary/myriadpro.html'
+            css2: 'views/partials/css/fontsecondary/myriadpro.html',
+            checked: ''
         },
     ];
 
@@ -28074,6 +28078,12 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             img: 'assets/images/banner/banner2.jpg',
             html: 'views/partials/html/banner/banner2.html',
             css: 'views/partials/css/banner/banner1.html'
+        },
+        {
+            title: 'Text Left - Form Right',
+            img: 'assets/images/banner/banner3.jpg',
+            html: 'views/partials/html/banner/banner3.html',
+            css: 'views/partials/css/banner/banner3.html'
         },
     ];
 
