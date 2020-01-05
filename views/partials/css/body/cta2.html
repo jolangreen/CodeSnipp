@@ -1,26 +1,26 @@
 <xmp>
-.listed-content .col-md-4
+/*___________________________ CARDS ___________________________*/
+.cards-overlay .card-item
+    position: relative
     display: block
     height: 230px
     overflow: hidden
-    position: relative
-
     img
         position: absolute
         width: 100%
-    h3
-        background: rgba(31, 174, 75, 0.7)
+    .card-title
+        position: absolute
         bottom: 0
         display: inline-block
+        background: rgba(31, 174, 75, 0.7)
         margin-bottom: 0
         padding: 5px 15px
-        position: absolute
         width: 100%
         color: white
         +font(32px)
         text-align: center
         text-transform: uppercase
 
-a.listed-content-item:hover h3
-    background: rgba(31, 174, 75, 1)
+    &:hover .card-title
+        background: rgba(31, 174, 75, 1)
 </xmp>

@@ -46,28 +46,32 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/opensans.html',
-            css2: 'views/partials/css/fontsecondary/opensans.html'
+            css2: 'views/partials/css/fontsecondary/opensans.html',
+            checked: 'checked'
         },
         {
             title: 'Georgia',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/georgia.html',
-            css2: ''
+            css2: '',
+            checked: ''
         },
         {
             title: 'Arial',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/arial.html',
-            css2: ''
+            css2: '',
+            checked: ''
         },
         {
             title: 'Myriad Pro',
             img: null,
             html: null,
             css: 'views/partials/css/fontprimary/myriadpro.html',
-            css2: 'views/partials/css/fontsecondary/myriadpro.html'
+            css2: 'views/partials/css/fontsecondary/myriadpro.html',
+            checked: ''
         },
     ];
 
@@ -143,7 +147,13 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             title: 'Text Left - Img Right',
             img: 'assets/images/banner/banner2.jpg',
             html: 'views/partials/html/banner/banner2.html',
-            css: 'views/partials/css/banner/banner2.html'
+            css: 'views/partials/css/banner/banner1.html'
+        },
+        {
+            title: 'Text Left - Form Right',
+            img: 'assets/images/banner/banner3.jpg',
+            html: 'views/partials/html/banner/banner3.html',
+            css: 'views/partials/css/banner/banner3.html'
         },
     ];
 
@@ -152,7 +162,8 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             title: 'Icon & Content',
             img: 'assets/images/body/cta1.jpg',
             html: 'views/partials/html/body/cta1.html',
-            css: 'views/partials/css/body/cta1.html'
+            css: null,
+            background: false
         },
         {
             title: 'Image With Text Overlay',
@@ -164,7 +175,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             title: 'Image, Title & Text',
             img: 'assets/images/body/cta3.jpg',
             html: 'views/partials/html/body/cta3.html',
-            css: 'views/partials/css/body/cta1.html'
+            css: null
         },
         {
             title: 'Gallery',
@@ -203,28 +214,28 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             css: null
         },
         {
-            title: 'Center Image Section',
+            title: 'Background Image - Center',
             img: 'assets/images/body/center-img.jpg',
-            html: 'views/partials/html/body/center-img.html',
+            html: 'views/partials/html/body/callout.html',
             css: 'views/partials/css/body/callout.html'
         },
         {
             title: 'Callout',
             img: 'assets/images/body/callout.jpg',
-            html: 'views/partials/html/body/callout.html',
+            html: 'views/partials/html/body/callout2.html',
             css: 'views/partials/css/body/callout.html'
         },
         {
             title: 'Background Left',
             img: 'assets/images/body/background-left.jpg',
             html: 'views/partials/html/body/background-left.html',
-            css: 'views/partials/css/body/background.html'
+            css: null
         },
         {
             title: 'Background Right',
             img: 'assets/images/body/background-right.jpg',
             html: 'views/partials/html/body/background-right.html',
-            css: 'views/partials/css/body/background.html'
+            css: null
         },
         {
             title: 'Form Left - Content Right',
@@ -263,20 +274,20 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         var cssLayoutContent = $('#CSSLayoutContent').text();
         var cssPageContent = $('#CSSPageContent').text();
         var cssModulesContent = $('#CSSModulesContent').text();
-        var CSSStyleContent = $('#CSSStyleContent').text();
+        var CSSVariablesContent = $('#CSSVariablesContent').text();
         var CSSBaseContent = $('#CSSBaseContent').text();
         var data = new Blob([htmlContent], { type: 'text/plain;charset=utf-8' });
         var data2 = new Blob([cssLayoutContent], { type: 'text/plain;charset=utf-8' });
         var data3 = new Blob([cssPageContent], { type: 'text/plain;charset=utf-8' });
         var data4 = new Blob([cssModulesContent], { type: 'text/plain;charset=utf-8' });
-        var data5 = new Blob([CSSStyleContent], { type: 'text/plain;charset=utf-8' });
+        var data5 = new Blob([CSSVariablesContent], { type: 'text/plain;charset=utf-8' });
         var data6 = new Blob([CSSBaseContent], { type: 'text/plain;charset=utf-8' });
         // Need to take these files and put it on the server in 'preview' folder
         FileSaver.saveAs(data, 'index.html');
         FileSaver.saveAs(data2, '_layout.sass');
-        FileSaver.saveAs(data3, '_page-all.sass');
+        FileSaver.saveAs(data3, '_home.sass');
         FileSaver.saveAs(data4, '_modules.sass');
-        FileSaver.saveAs(data5, 'style.scss');
+        FileSaver.saveAs(data5, '_variables.scss');
         FileSaver.saveAs(data6, '_base.sass');
         
         //var data = new Blob([allContent], { type: 'aplication/zip' });

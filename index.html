@@ -29,8 +29,7 @@
 <div class="main-header container text-center">
     <h1>Code Snipp <small>- Jolan Green</small></h1>
     <button class="my_clip_button btn btn-primary" ng-click="vm.download()">Download HTML/CSS</button>
-    <button class="btn btn-primary" ng-click="preview()">Preview</button>
-    <!-- <button class="btn btn-primary" ng-click="preview()" disabled="disabled">Preview</button> -->
+    <button class="btn btn-primary" ng-click="preview()" disabled="disabled">Preview</button>
 </div>
 
 <!-- Main Content
@@ -40,15 +39,15 @@
 </div>
 <div class="clear"></div>
 
-<pre id="HTMLContent" style="display:none;">
+<pre id="HTMLContent" class="hide">
     <html-template></html-template>
 </pre>
 
-<pre id="CSSLayoutContent" style="display:none;">
+<pre id="CSSLayoutContent" class="hide">
     <css-template></css-template>
 </pre>
 
-<pre id="CSSPageContent" style="display:none;">
+<pre id="CSSPageContent" class="hide">
     <csspage-template></csspage-template>
 </pre>
 
@@ -56,8 +55,8 @@
     <cssmodules-template></cssmodules-template>
 </pre>
 
-<pre id="CSSStyleContent">
-    <cssstyle-template></cssstyle-template>
+<pre id="CSSVariablesContent" class="hide">
+    <cssvariables-template></cssvariables-template>
 </pre>
 
 <pre id="CSSBaseContent" class="hide">
@@ -68,16 +67,16 @@
 
 <script src="assets/js/scripts.js"></script>
 
-<script src="assets/js/ZeroClipboard.js"></script>
+<!-- <script src="assets/js/ZeroClipboard.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.6/ZeroClipboard.swf"></script>
-
+ -->
 <script>
-    $(document).ready(function() {
+    /*$(document).ready(function() {
         var clientTarget = new ZeroClipboard($("#target-to-copy, #target-to-copy-css, #target-to-copy-css2, #target-to-copy-css3"), {
             moviePath: "assets/js/ZeroClipboard.swf",
             debug: false
         });
-    });
+    });*/
 
 
     var counter = 0;
@@ -86,6 +85,10 @@
         '</div><div class="row">'
         counter++
     };
+
+    //$("#font0").prop("checked", true);
+    //$("#font0").prop("checked", true).trigger("click");
+    $("#font0").attr('checked', 'checked').trigger("click");
 </script>
 
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

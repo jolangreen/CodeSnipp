@@ -3,9 +3,10 @@ footer
     background: $color-dark
     padding-top: 20px
     +font(13px)
+    color: $color-brightest
 
     hr
-        border-bottom: 1px solid $color-Medium
+        border-bottom: 1px solid $color-medium
         margin: 5px 0
 
     .container .row
@@ -28,7 +29,7 @@ footer
                     font-family: 'FontAwesome'
                     
         a
-            color: $color-text
+            color: $color-brightest
 
             &:hover
                 color: $color-secondary
@@ -45,7 +46,7 @@ footer
             height: 34px
 
 
-@media (max-width: 767px)
++breakpoint
     footer .container
         text-align: center
 

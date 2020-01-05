@@ -21,7 +21,7 @@
                     <hr>
                     <h3>Font</h3>
                     <div class="font-setting" ng-repeat="fontitem in fontitems" ng-class="{active: selected.font == fontitem}">
-                        <input type="radio" name="font" ng-click="select(fontitem, 'font')"> <label>{{fontitem.title}}</label>
+                        <input type="radio" name="font" id="font{{$index}}" ng-click="select(fontitem, 'font')"> <label>{{fontitem.title}}</label>
                     </div>
 
                     <hr>
@@ -71,14 +71,16 @@
         <tab heading="Body">
             <br>
             <h4>
-                <div  class="alert alert-info">Selected Item: <span class="label label-success" ng-repeat="body in selected.bodyitemx track by $index">{{body.title}}</span></div>
+                <div class="alert alert-info">Selected Item: <span class="label label-success" ng-repeat="body in selected.bodyitemx track by $index">{{body.title}}</span></div>
             </h4>
             <div class="row">
                 <div class="col-md-4" ng-repeat="bodyitem in bodyitems track by $index" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
                     <img src="{{bodyitem.img}}" alt="">
                     <h3>{{bodyitem.title}}</h3>
-                    <div><input type="checkbox" ng-model="checkboxModel.value1" ng-true-value="'YES'" ng-false-value="'NO'"> Background Color</div>
-                    <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body')">Select</a>
+                    <!-- <a ng-click="selected.value = $index">A{{$index}}</a> -->
+                    <div><input type="checkbox" ng-model="bodyitem.background" ng-true-value="background-class" ng-false-value=""> Background Color</div>
+                    <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body', $index)">Select</a>
+                    {{bodyitem.background}}
                 </div>
             </div>
         </tab>
