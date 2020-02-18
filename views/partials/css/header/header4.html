@@ -1,22 +1,17 @@
 <xmp>
 header
-    padding-top: 15px
     .container
         position: relative
         text-align: center
 
         .logo
-            margin: 0
-            line-height: 0
-
-        .logo a
-            background: image-url("logo.png") no-repeat center $color-brightest
-            display: block
-            height: 180px
-            left: 0
-            margin-bottom: 15px
-            margin: 0 auto
-            width: 100%
+            a
+                background: image-url("logo.png") no-repeat center $color-brightest
+                display: block
+                height: 180px
+                margin-bottom: 15px
+                margin: 0 auto
+                width: 100%
 
 
 /*___________________________ NAVIGATION ___________________________*/
@@ -40,6 +35,8 @@ nav.navbar
             display: inline-table
             position: relative
             list-style: none
+            &:last-of-type a:after
+                content: ""
             & > a
                 padding: 15px 8px
                 text-transform: uppercase
@@ -48,8 +45,8 @@ nav.navbar
                     margin-left: 22px
                     color: $color-bright
                     content: "/"
-                &:after:last-of-type
-                    content: ""
+                    +breakpoint
+                        content: ""
                 &:hover
                     background: transparent
                     color: $color-primary
@@ -64,4 +61,53 @@ nav.navbar
             color: $color-bright
             font-weight: bold
             text-decoration: none
+
+        //Sub-Menu --
+        .menu-toggle
+            display: none
+
+        .sub-menu
+            top: 30px
+
+        .sub-menu,
+        .children
+            background-color: $color-bright
+            border-top: 0
+            display: none
+            padding: 0
+            position: absolute
+            left: -2px
+            z-index: 3000
+            list-style: none
+            +breakpoint
+                position: static
+            li
+                padding: 6px 5px
+                text-align: center
+                +border(bottom, #555)
+                background: $color-dark
+                a
+                    color: $color-brightest
+                    margin: 0
+                    display: block
+                    min-width: 200px
+                    text-decoration: none
+
+                &:hover
+                    background: $color-secondary
+                    color: $color-brightest
+                    a
+                        color: $color-brightest
+                          
+      
+            .sub-menu ul,
+            .children ul
+                border-left: 0
+                left: 100%
+                top: 0px
+      
+        //HOVER ACTIVATION
+        li:hover > ul
+            display: block
+
 </xmp>

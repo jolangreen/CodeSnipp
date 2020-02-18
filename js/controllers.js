@@ -155,6 +155,12 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             html: 'views/partials/html/banner/banner3.html',
             css: 'views/partials/css/banner/banner3.html'
         },
+        {
+            title: 'Fading Banner',
+            img: 'assets/images/banner/banner1.jpg',
+            html: 'views/partials/html/banner/banner4.html',
+            css: 'views/partials/css/banner/banner4.html'
+        },
     ];
 
     $scope.bodyitems = [

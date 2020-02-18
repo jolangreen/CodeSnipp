@@ -1,0 +1,82 @@
+<xmp>
+.banner
+    overflow: hidden
+    padding: 0
+    position: relative
+
+.carousel
+
+    .item
+        background-size: cover
+    .item-container
+        position: relative
+        z-index: 2
+        height: 700px
+        display: table
+        .row
+            display: table-cell
+            vertical-align: middle
+
+    h1, p
+        line-height: 1.25
+        text-shadow: 0 1px 1px rgba(0,0,0,.4)
+        &.bg-shadow
+            display: inline-block
+            background-color: rgba(0,0,0,0.6)
+
+    h1
+        +font(50px)
+    p
+        +font($font-size-medium-large)
+    a.btn
+        background-color: transparent
+        border: 2px solid $color-brightest
+        margin-top: $spacing-small
+        padding: 10px 20px
+        color: $color-brightest
+        +font(20px)
+        text-transform: uppercase
+
+    .carousel-control
+        z-index: 5
+
+        .glyphicon-chevron-left, .glyphicon-chevron-right
+            background: $color-darkest
+            height: 80px
+            top: 44%
+            width: 50px
+            color: $color-brightest
+            line-height: 77px
+
+        .glyphicon-chevron-left
+            left: 7px
+            &:before
+                font-family: 'fontAwesome'
+                content: '\f053'
+        .glyphicon-chevron-right
+            right: 7px
+            &:before
+                font-family: 'fontAwesome'
+                content: '\f054'
+
+.carousel-fade
+    .carousel-inner
+        .item
+            transition-property: opacity
+        .item,
+        .active.left,
+        .active.right
+            opacity: 0
+        .active,
+        .next.left,
+        .prev.right
+            opacity: 1
+        .next,
+        .prev,
+        .active.left,
+        .active.right
+            left: 0
+            transform: translate3d(0, 0, 0)
+    .carousel-control
+        z-index: 2
+</xmp>

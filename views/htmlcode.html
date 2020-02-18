@@ -1,0 +1,227 @@
+<style>
+  hr {margin: 50px 0;}
+</style>
+<section>
+  <div class="container" ng-controller="PhpController">
+    <h1>HTML Code</h1>
+
+<accordion close-others="oneAtATime">
+
+<accordion-group heading="Comments">
+<xmp>/* ==========================================================================
+   HEADING PRIMARY
+   ========================================================================== */
+
+
+
+/* HEADING SECONDARY
+   ========================================================================== */
+
+
+
+/*______ Heading Tertiary _____*/
+</xmp>
+</accordion-group>
+
+<accordion-group heading="Vertical Center">
+<h3>Inline Block Center</h3>
+<h4>HTML</h4>
+<pre>
+<xmp><section class="block">
+  <div class="inner-block">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ab impedit omnis cum. 
+    Quam dolorum odit architecto vero, ipsum repellat unde! Voluptatibus, obcaecati.
+  </div>
+</section></xmp></pre>
+<h4>CSS</h4>
+<pre>
+  section {
+    display: block;
+    width: 500px;
+    background: #3CB8E7;
+    margin: 0 auto 1em;
+    height: 150px;
+    line-height: 150px;
+    border-radius: .2em;
+    position: relative;
+    color: white;
+    padding: 1em; /* Can add padding */
+  }
+  .block .inner-block, .block .image {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+  }
+</pre>
+<hr>
+<h3>Table Center</h3>
+<h4>HTML</h4>
+<pre>
+<xmp><section class="block">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ab impedit omnis cum. 
+    Quam dolorum odit architecto vero, ipsum repellat unde! Voluptatibus, obcaecati.
+  </p>
+</section></xmp></pre>
+<h4>CSS</h4>
+<pre>
+  section {
+    display: table;
+    width: 500px;
+    background: #3CB8E7;
+    margin: 0 auto 1em;
+    height: 150px;
+    border-radius: .2em;
+    position: relative;
+    color: white;
+    padding: 1em; /* Can add padding */
+  }
+  .block p, .block .image {
+    display: table-cell;
+    vertical-align: middle;
+  }
+</pre>
+<hr>
+<h3>Transform Center</h3>
+<h4>HTML</h4>
+<pre>
+<xmp><section class="block">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ab impedit omnis cum. 
+    Quam dolorum odit architecto vero, ipsum repellat unde! Voluptatibus, obcaecati.
+  </p>
+</section></xmp></pre>
+<h4>CSS</h4>
+<pre>
+  section {
+    display: block;
+    width: 500px;
+    background: #3CB8E7;
+    margin: 0 auto 1em;
+    height: 150px;
+    border-radius: .2em;
+    position: relative;
+    color: white;
+  }
+  .block p, .block img {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 1em; /* cant add padding to parent element */
+  }
+</pre>
+<hr>
+<h3>Flexbox Center</h3>
+<h4>HTML</h4>
+<pre>
+<xmp><section class="block">
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem ab impedit omnis cum. 
+    Quam dolorum odit architecto vero, ipsum repellat unde! Voluptatibus, obcaecati.
+  </p>
+</section></xmp></pre>
+<h4>CSS</h4>
+<pre>
+  section {
+    display:flex;
+    align-items: center;
+    width: 500px;
+    background: #3CB8E7;
+    margin: 0 auto 1em;
+    height: 150px;
+    border-radius: .2em;
+    position: relative;
+    color: white;
+    padding: 0 15px;
+  }
+</pre>
+</accordion-group>
+
+<accordion-group heading="Drop Down">
+<h3>Step 1: Remove Old CSS</h3>
+<xmp>//HOVER ACTIVATION
+li:hover > ul
+    display: block
+</xmp>
+<h3>Step 2: Add Nav Bar CSS</h3>
+<xmp>
+.sub-menu,
+.children
+    background-color: $color-bright
+    border-top: 0
+    display: none
+    padding: 0
+    position: absolute
+    left: -2px
+    z-index: 3000
+    list-style: none
+    +breakpoint
+        position: static
+    li
+        padding: 6px 5px
+        text-align: center
+        +border(bottom, #555)
+        background: $color-dark
+        a
+            color: $color-brightest
+            margin: 0
+            display: block
+            min-width: 200px
+            text-decoration: none
+
+        &:hover
+            background: $color-secondary
+            color: $color-brightest
+            a
+                color: $color-brightest
+                  
+
+    .sub-menu ul,
+    .children ul
+        border-left: 0
+        left: 100%
+        top: 0px
+</xmp>
+<h3>Step 3: Add Javascript</h3>
+<xmp>
+  $('.nav li').mouseover(function() {
+    $(this).children('.sub-menu').slideDown(300);
+  });
+  $('.nav li').mouseleave(function() {
+    $(this).children('.sub-menu').slideUp(300);
+  });
+</xmp>
+</accordion-group>
+<accordion-group heading="Multi-Level Drop Down">
+<a href="downloads/dlmenu.zip" download>Download Here</a>
+<h3>Add Menu HTML</h3>
+<xmp><div class="mobile-nav mobile-only">
+  <div id="dl-menu" class="dl-menuwrapper">
+    <button class="dl-trigger">×</button>
+    <ul class="dl-menu">
+      <!-- Add List Items -->
+    </ul>
+  </div>
+</div>
+</xmp>
+<h3>Add Javascript</h3>
+<xmp>
+<script src="js/min/modernizr.custom.js"></script>
+<script src="js/min/jquery.dlmenu.js"></script>
+<script>
+  $(function() {
+      $( '#dl-menu' ).dlmenu();
+  });
+</script>
+</xmp>
+<h3>Add CSS</h3>
+<xmp>
+<link rel="stylesheet" href="css/min/dlmenu.css" />
+</xmp>
+</accordion-group>
+
+</accordion>
+
+
+  </div>
+</section>

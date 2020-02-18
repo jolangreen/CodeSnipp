@@ -1,15 +1,36 @@
 <xmp>
 .top
     background: $color-dark
-    height: 40px
+    +breakpoint('sm', 'up')
+        height: 40px
+    +breakpoint
+        text-align: center
+    .top-social
+        margin: 8px 0 0
+        padding: 0
+        list-style: none
+        +breakpoint('sm', 'up')
+            position: absolute
+            left: 0
+        li
+            display: inline-block
+            padding: 0 10px
+            a
+                color: $white
+
 
 .navbar-form
     margin-bottom: 6px
     margin-top: 6px
+    box-shadow: none
+    +breakpoint('sm', 'up')
+        position: absolute
+        right: 0
     input[type="text"]
         border-radius: 5px
         height: auto !important
         margin-bottom: 0
+        padding: 4px
         +transition(all 0.4s ease-in-out)
         width: 200px
         &:focus
@@ -24,6 +45,7 @@
         height: 28px
         margin-left: -12px
         padding: 2px 8px
+        +font(14px)
 
 
 header
@@ -33,6 +55,9 @@ header
 
     .container
         position: relative
+        +breakpoint
+            padding-left: 0
+            padding-right: 0
 
         .logo
             margin: 0
@@ -97,4 +122,52 @@ nav.navbar
             background-color: $color-primary
             color: $color-brightest
             text-decoration: none
+
+        //Sub-Menu --
+        .menu-toggle
+            display: none
+
+        .sub-menu
+            top: 30px
+
+        .sub-menu,
+        .children
+            background-color: $color-bright
+            border-top: 0
+            display: none
+            padding: 0
+            position: absolute
+            left: -2px
+            z-index: 3000
+            list-style: none
+            +breakpoint
+                position: static
+            li
+                padding: 6px 5px
+                text-align: center
+                +border(bottom, #555)
+                background: $color-dark
+                a
+                    color: $color-brightest
+                    margin: 0
+                    display: block
+                    min-width: 200px
+                    text-decoration: none
+
+                &:hover
+                    background: $color-secondary
+                    color: $color-brightest
+                    a
+                        color: $color-brightest
+                          
+      
+            .sub-menu ul,
+            .children ul
+                border-left: 0
+                left: 100%
+                top: 0px
+      
+        //HOVER ACTIVATION
+        li:hover > ul
+            display: block
 </xmp>

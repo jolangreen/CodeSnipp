@@ -34,6 +34,10 @@ myApp.config(['$routeProvider', function($routeProvider){
         templateUrl: 'views/phpcode.html',
         controller : 'PhpController'
     })
+    .when('/htmlcode', {
+        templateUrl: 'views/htmlcode.html',
+        controller : 'PhpController'
+    })
     .when('/javascript', {
         templateUrl: 'views/javascript.html',
         controller : 'PhpController'

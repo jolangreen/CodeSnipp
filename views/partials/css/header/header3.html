@@ -20,12 +20,14 @@ header
 .navbar-form
     margin-bottom: 6px
     margin-top: 18px
+    box-shadow: none
     input[type="text"]
         border-radius: 5px
         height: auto !important
         +transition(all 0.4s ease-in-out)
         width: 200px
         margin-bottom: 0
+        padding: 4px
         &:focus
             width: 250px
     i
@@ -38,6 +40,7 @@ header
         height: 28px
         margin-left: -12px
         padding: 2px 8px
+        +font(14px)
 
 
 /*___________________________ NAVIGATION ___________________________*/
@@ -56,8 +59,9 @@ nav.navbar
 
     .nav
         margin: 6px 0
+        text-align: left
         & > li
-            float: left
+            display: inline-block
             list-style: none
             position: relative
             & > a
@@ -68,10 +72,60 @@ nav.navbar
                     margin-left: 22px
                     color: $color-text
                     content: "|"
+                    +breakpoint
+                        content: ""
                 &:after:last-of-type
                     content: ""
                 &:hover
                     background: transparent
                     color: $color-primary
                     text-decoration: none
+
+        //Sub-Menu --
+        .menu-toggle
+            display: none
+
+        .sub-menu
+            top: 30px
+
+        .sub-menu,
+        .children
+            background-color: $color-bright
+            border-top: 0
+            display: none
+            padding: 0
+            position: absolute
+            left: -2px
+            z-index: 3000
+            list-style: none
+            +breakpoint
+                position: static
+            li
+                padding: 6px 5px
+                text-align: center
+                +border(bottom, #555)
+                background: $color-dark
+                a
+                    color: $color-brightest
+                    margin: 0
+                    display: block
+                    min-width: 200px
+                    text-decoration: none
+
+                &:hover
+                    background: $color-secondary
+                    color: $color-brightest
+                    a
+                        color: $color-brightest
+                          
+      
+            .sub-menu ul,
+            .children ul
+                border-left: 0
+                left: 100%
+                top: 0px
+      
+        //HOVER ACTIVATION
+        li:hover > ul
+            display: block
 </xmp>

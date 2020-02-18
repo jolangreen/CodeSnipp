@@ -13,7 +13,7 @@
                         <label>Primary Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.primary" maxlength="6" ng-init="colors.primary='1FAE4A'">
                     </div>
                     <div class="color-setting">
-                        <label>Secondary Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.secondary"maxlength="6" ng-init="colors.secondary='4EC0C2'">
+                        <label>Secondary Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.secondary" maxlength="6" ng-init="colors.secondary='4EC0C2'">
                     </div>
                     <div class="color-setting">
                         <label>Text Color: </label> <span class="text-muted">#</span><input type="text" ng-model="colors.text" maxlength="6" ng-init="colors.text='8C989E'">
@@ -78,7 +78,8 @@
                     <img src="{{bodyitem.img}}" alt="">
                     <h3>{{bodyitem.title}}</h3>
                     <!-- <a ng-click="selected.value = $index">A{{$index}}</a> -->
-                    <div><input type="checkbox" ng-model="bodyitem.background" ng-true-value="background-class" ng-false-value=""> Background Color</div>
+                    
+                    <a href="#myModal" data-toggle="modal" data-target="#myModal" class="btn btn-primary">Set BG Color</a>
                     <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body', $index)">Select</a>
                     {{bodyitem.background}}
                 </div>
@@ -87,4 +88,24 @@
       </tabset>
 
     </div><!-- .row -->
+</div>
+
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title text-medium" id="myModalLabel">Class</h4>
+      </div>
+      <div class="modal-body">
+        <div><input type="radio" name="bgcolor" ng-model="bodyitem.background" ng-true-value="{{bodyitem.background}}" ng-false-value=""> Background Blue</div>
+        <div><input type="radio" name="bgcolor" ng-model="bodyitem.background" ng-true-value="{{bodyitem.background}}" ng-false-value=""> Background Gray</div>
+        <div><input type="radio" name="bgcolor" ng-model="bodyitem.background" ng-true-value="background-dark" ng-false-value=""> Background Dark</div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn btn-primary" data-dismiss="modal">Done</a>
+      </div>
+    </div>
+  </div>
 </div>

@@ -1,28 +1,27 @@
 <xmp>
-.home header
-    background: transparent
-    
 header
-    position: absolute
-    z-index: 10
-    width: 100%
-    background: image-url("headers/banner1.jpg") #f1f1f1
-    background-size: cover
+    .home &
+        background: transparent
+        position: absolute
+        z-index: 10
+        width: 100%
+        +breakpoint
+            .navbar-toggle
+                margin-right: 0
+                .icon-bar
+                    background: $color-white
 
     .container
         position: relative
 
         .logo
-            margin: 0
-            line-height: 0
-
-        .logo a
-            display: block
-            float: left
-            left: 0
-            width: 200px
-            height: 50px
-            background: image-url("logo.png") no-repeat
+            +breakpoint
+                float: left
+            a
+                display: inline-block
+                width: 200px
+                height: 50px
+                background: image-url("logo.png") no-repeat
 
 
 /*___________________________ NAVIGATION ___________________________*/
@@ -61,4 +60,52 @@ nav.navbar
             color: $color-brightest
             background-color: $color-primary
             text-decoration: none
+
+        //Sub-Menu --
+        .menu-toggle
+            display: none
+
+        .sub-menu
+            top: 30px
+
+        .sub-menu,
+        .children
+            background-color: $color-bright
+            border-top: 0
+            display: none
+            padding: 0
+            position: absolute
+            left: -2px
+            z-index: 3000
+            list-style: none
+            +breakpoint
+                position: static
+            li
+                padding: 6px 5px
+                text-align: center
+                +border(bottom, #555)
+                background: $color-dark
+                a
+                    color: $color-brightest
+                    margin: 0
+                    display: block
+                    min-width: 200px
+                    text-decoration: none
+
+                &:hover
+                    background: $color-secondary
+                    color: $color-brightest
+                    a
+                        color: $color-brightest
+                          
+      
+            .sub-menu ul,
+            .children ul
+                border-left: 0
+                left: 100%
+                top: 0px
+      
+        //HOVER ACTIVATION
+        li:hover > ul
+            display: block
 </xmp>

@@ -27918,6 +27918,10 @@ myApp.config(['$routeProvider', function($routeProvider){
         templateUrl: 'views/phpcode.html',
         controller : 'PhpController'
     })
+    .when('/htmlcode', {
+        templateUrl: 'views/htmlcode.html',
+        controller : 'PhpController'
+    })
     .when('/javascript', {
         templateUrl: 'views/javascript.html',
         controller : 'PhpController'
@@ -28084,6 +28088,12 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             img: 'assets/images/banner/banner3.jpg',
             html: 'views/partials/html/banner/banner3.html',
             css: 'views/partials/css/banner/banner3.html'
+        },
+        {
+            title: 'Fading Banner',
+            img: 'assets/images/banner/banner1.jpg',
+            html: 'views/partials/html/banner/banner4.html',
+            css: 'views/partials/css/banner/banner4.html'
         },
     ];
 

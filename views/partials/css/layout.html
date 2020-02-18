@@ -9,54 +9,6 @@
    ========================================================================== */
 </xmp><div ng-include="selected.header.css"></div><xmp>
 
-        //Sub-Menu --
-        .menu-toggle
-            display: none
-
-        .sub-menu
-            top: 30px
-
-        .sub-menu,
-        .children
-            background-color: $color-bright
-            border-top: 0
-            display: none
-            left: -2px
-            list-style: none
-            padding: 0
-            position: absolute
-            z-index: 3000
-            li
-                background: $color-dark
-                +border(bottom, #555)
-                padding: 6px 5px
-                text-align: center
-                a
-                    display: block
-                    margin: 0
-                    min-width: 200px
-                    color: $color-brightest
-                    text-decoration: none
-
-                &:hover
-                    background: $color-secondary
-                    color: $color-brightest
-                    a
-                        color: $color-brightest
-
-
-            .sub-menu ul,
-            .children ul
-                border-left: 0
-                left: 100%
-                top: 0px
-
-
-        //HOVER ACTIVATION
-        li:hover > ul
-            display: block
-
-
 nav .nav-links
     margin-bottom: 30px
     a

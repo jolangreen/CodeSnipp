@@ -2,13 +2,15 @@
 <header>
     <nav class="navbar">
         <div class="container top">
-            <div class="row">                
-                <div class="logo"><a href="<?php echo home_url( '/' ); ?>"></a></div>
-                <div class="social pull-right">
-                    <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-facebook"></i></a>
-                    <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-twitter"></i></a>
-                    <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-linkedin"></i></a>
-                    <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-pinterest"></i></a>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="logo"><a href="<?php echo home_url( '/' ); ?>"></a></div>
+                    <div class="social desktop-only">
+                        <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-facebook"></i></a>
+                        <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-twitter"></i></a>
+                        <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-linkedin"></i></a>
+                        <a href="#" class="icon-item icon-item-o icon-medium"><i class="fa fa-pinterest"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -21,14 +23,16 @@
             </button>
         </div>
         <div class="navbar-collapse collapse">
-           <div class="container">
-               <ul id="menu-header-menu" class="nav">
-                    <li class="current-menu-item"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="mobile-only padding-top-medium">
+              Get Quote
+              <hr class="margin-top-medium">
             </div>
+            <ul id="menu-header-menu" class="nav">
+                <li class="current-menu-item"><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
 </header>
