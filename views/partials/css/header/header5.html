@@ -1,111 +1,86 @@
 <xmp>
-header
-    .home &
-        background: transparent
-        position: absolute
-        z-index: 10
-        width: 100%
-        +breakpoint
-            .navbar-toggle
-                margin-right: 0
-                .icon-bar
-                    background: $color-white
-
-    .container
-        position: relative
-
-        .logo
-            +breakpoint
-                float: left
-            a
-                display: inline-block
-                width: 200px
-                height: 50px
-                background: image-url("logo.png") no-repeat
-
-
-/*___________________________ NAVIGATION ___________________________*/
-nav.navbar
-    margin-bottom: 0
-    padding: 7px 0 4px
-    +border-radius(0)
-    background: transparent
-
-    a, a:visited
-        color: $color-brightest
-        &:hover
-            color: $color-brightest
-            text-decoration: none
-
-    .nav
-        display: inline-block
-        & > li
-            display: inline-block
-            position: relative
-            padding: 5px 0
-            & > a
-                padding: 8px 15px
-                +border-radius(10px)
-                text-transform: uppercase
-                margin-left: 5px
-                &:hover
-                    background-color: $color-primary
-
-        //Active State --
-        .active > a,
-        .current_page_item > a,
-        .current_page_ancestor > a,
-        .current-menu-item > a,
-        .current-menu-ancestor > a
-            color: $color-brightest
-            background-color: $color-primary
-            text-decoration: none
-
-        //Sub-Menu --
-        .menu-toggle
-            display: none
-
-        .sub-menu
-            top: 30px
-
-        .sub-menu,
-        .children
-            background-color: $color-bright
-            border-top: 0
-            display: none
-            padding: 0
-            position: absolute
-            left: -2px
-            z-index: 3000
-            list-style: none
-            +breakpoint
-                position: static
-            li
-                padding: 6px 5px
-                text-align: center
-                +border(bottom, #555)
-                background: $color-dark
-                a
-                    color: $color-brightest
-                    margin: 0
-                    display: block
-                    min-width: 200px
-                    text-decoration: none
-
-                &:hover
-                    background: $color-secondary
-                    color: $color-brightest
-                    a
-                        color: $color-brightest
-                          
-      
-            .sub-menu ul,
-            .children ul
-                border-left: 0
-                left: 100%
-                top: 0px
-      
-        //HOVER ACTIVATION
-        li:hover > ul
-            display: block
+header {
+  padding-top: 15px;
+  @include breakpoint('sm', 'up') {
+      .company-logo {
+        padding: 20px 0;
+      }
+  }
+  /*______ NAVIGATION _____*/
+  #mainNav {
+      @include breakpoint('sm', 'up') {
+        width: 100%;
+      }
+      display: flex;
+      justify-content: center;
+  }
+  .nav-menu {
+      list-style: none;
+      padding-left: 0;
+      gap: 10px;
+      align-items: center;
+      @include breakpoint('sm', 'up') {
+        grid-auto-flow: column;
+        display: grid !important;
+      }
+      @media (max-width: 900px) and (min-width: 768px) {
+        gap: 0;
+      }
+      @include breakpoint {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 52px;
+        left: 0;
+        z-index: 200;
+        padding-bottom: 30px;
+        background-color: $color-brightest;
+      }
+  }
+  .nav-menu__list-item {
+      font-family: $font-tertiary;
+      font-size: $root-font-size;
+      text-align: center;
+      white-space: nowrap;
+      @include breakpoint {
+        padding-left: 20px;
+        padding-right: 20px;
+        .btn {
+            margin: 5px 0;
+        }
+      }
+      .nav-menu__link {
+        display: inline-block;
+        color: $color-text;
+        padding: 7px;
+        &:hover {
+            color: $color-primary-dark;
+        }
+      }
+  }
+  .mobile-nav-burger {
+      display: none;
+      @include breakpoint {
+        display: block;
+        .mobile-nav-burger__close {
+            display: none;
+        }
+      }
+      .mobile-nav-burger__link {
+        fill: $color-text;
+        &:hover {
+            fill: $color-primary-dark;
+        }
+      }
+  }
+}
+/*______ MOBILE NAV BURGER _____*/
+#mainNav.active {
+  .mobile-nav-burger__open {
+      display: none;
+  }
+  .mobile-nav-burger__close {
+      display: block;
+  }
+}
 </xmp>

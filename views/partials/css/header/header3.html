@@ -1,131 +1,91 @@
 <xmp>
-header
-    .container
-        position: relative
-        text-align: center
-
-        .logo
-            margin: 0
-            line-height: 0
-
-        .logo a
-            background: image-url("logo.png") no-repeat center $color-bright
-            display: block
-            height: 180px
-            left: 0
-            margin-bottom: 15px
-            margin: 0 auto
-            width: 100%
-
-.navbar-form
-    margin-bottom: 6px
-    margin-top: 18px
-    box-shadow: none
-    input[type="text"]
-        border-radius: 5px
-        height: auto !important
-        +transition(all 0.4s ease-in-out)
-        width: 200px
-        margin-bottom: 0
-        padding: 4px
-        &:focus
-            width: 250px
-    i
-        left: -28px
-        position: relative
-        top: 0px
-        color: $color-medium
-    input[type="submit"]
-        background: $color-primary
-        height: 28px
-        margin-left: -12px
-        padding: 2px 8px
-        +font(14px)
-
-
-/*___________________________ NAVIGATION ___________________________*/
-nav.navbar
-    background: $color-background
-    +border-radius(0)
-    margin-bottom: 0
-    text-align: center
-
-    a, a:visited
-        color: $color-bright
-
-    //Adjust Nav Bar BG Color
-    .navbar-collapse
-        background: $color-dark
-
-    .nav
-        margin: 6px 0
-        text-align: left
-        & > li
-            display: inline-block
-            list-style: none
-            position: relative
-            & > a
-                padding: 15px 8px
-                text-transform: uppercase
-                +font(17px)
-                &:after
-                    margin-left: 22px
-                    color: $color-text
-                    content: "|"
-                    +breakpoint
-                        content: ""
-                &:after:last-of-type
-                    content: ""
-                &:hover
-                    background: transparent
-                    color: $color-primary
-                    text-decoration: none
-
-        //Sub-Menu --
-        .menu-toggle
-            display: none
-
-        .sub-menu
-            top: 30px
-
-        .sub-menu,
-        .children
-            background-color: $color-bright
-            border-top: 0
-            display: none
-            padding: 0
-            position: absolute
-            left: -2px
-            z-index: 3000
-            list-style: none
-            +breakpoint
-                position: static
-            li
-                padding: 6px 5px
-                text-align: center
-                +border(bottom, #555)
-                background: $color-dark
-                a
-                    color: $color-brightest
-                    margin: 0
-                    display: block
-                    min-width: 200px
-                    text-decoration: none
-
-                &:hover
-                    background: $color-secondary
-                    color: $color-brightest
-                    a
-                        color: $color-brightest
-                          
-      
-            .sub-menu ul,
-            .children ul
-                border-left: 0
-                left: 100%
-                top: 0px
-      
-        //HOVER ACTIVATION
-        li:hover > ul
-            display: block
+header {
+  @include breakpoint {
+      padding-top: 15px;
+  }
+  .main-nav {
+      width: 100%;
+      @include breakpoint {
+        align-items: center;
+      }
+  }
+  @include breakpoint('sm', 'up') {
+      .company-logo {
+        padding: 20px 0;
+      }
+  }
+  /*______ NAVIGATION _____*/
+  .nav-menu {
+      list-style: none;
+      gap: 10px;
+      align-items: center;
+      padding-left: 0;
+      @include breakpoint('sm', 'up') {
+        grid-auto-flow: column;
+        display: grid !important;
+      }
+      @media (max-width: 900px) and (min-width: 768px) {
+        gap: 0;
+      }
+      @include breakpoint {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        z-index: 200;
+        padding-bottom: 30px;
+        background-color: $color-brightest;
+      }
+  }
+  .nav-menu__list-item {
+      font-size: $root-font-size;
+      text-align: center;
+      white-space: nowrap;
+      @include breakpoint {
+        padding-left: 20px;
+        padding-right: 20px;
+        .btn {
+            margin: 5px 0;
+        }
+      }
+      .nav-menu__link {
+        display: inline-block;
+        color: $color-text;
+        padding: 7px;
+        &:hover {
+            color: $color-primary-dark;
+        }
+      }
+  }
+  @include breakpoint {
+      .nav-menu--secondary {
+        display: none !important;
+      }
+  }
+  .mobile-nav-burger {
+      display: none;
+      @include breakpoint {
+        display: block;
+        .mobile-nav-burger__close {
+            display: none;
+        }
+      }
+      .mobile-nav-burger__link {
+        fill: $color-text;
+        &:hover {
+            fill: $color-primary-dark;
+        }
+      }
+  }
+}
+/*______ MOBILE NAV BURGER _____*/
+#mainNav.active {
+  .mobile-nav-burger__open {
+      display: none;
+  }
+  .mobile-nav-burger__close {
+      display: block;
+  }
+}
 </xmp>

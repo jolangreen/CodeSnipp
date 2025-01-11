@@ -1,25 +1,24 @@
 <xmp>
 <header>
-    <nav class="navbar">
+    <div class="header-container flex flex-mobile flex-vertical">
         <div class="container">
-            <div class="navbar-header">
-                <div class="logo"><a href="<?php echo home_url( '/' ); ?>"></a></div>
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div class="navbar-collapse collapse pull-right">
-               <ul id="menu-header-menu" class="nav navbar-nav">
-                    <li class="current-menu-item"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+            <a href="#" class="company-logo">
+                <img src="images/logo.png" alt="" class="company-logo__image">
+            </a>
         </div>
-    </nav>
+        <nav id="mainNav">
+            <div class="mobile-nav-burger">
+                <a href="javascript:void(0);" class="mobile-nav-burger__link">
+                    <svg class="mobile-nav-burger__open" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                    <svg class="mobile-nav-burger__close" xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+                </a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-menu__list-item"><a href="#" class="nav-menu__link">Home</a></li>
+                <li class="nav-menu__list-item"><a href="#" class="nav-menu__link">About</a></li>
+                <li class="nav-menu__list-item"><a href="#" class="nav-menu__link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 </xmp>

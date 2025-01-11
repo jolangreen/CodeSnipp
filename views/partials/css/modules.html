@@ -5,104 +5,169 @@
 
 </xmp><div ng-repeat="body in selected.bodyitemx"><div ng-include="body.css"></div></div><xmp>
 
+/*___________________________ CARDS ___________________________*/
+.cards-overlay .card-item {
+  position: relative;
+  display: block;
+  height: 230px;
+  overflow: hidden;
+  img {
+    position: absolute;
+    width: 100%;
+  }
+  .card-title {
+    position: absolute;
+    bottom: 0;
+    display: inline-block;
+    background: rgba(31, 174, 75, 0.7);
+    margin-bottom: 0;
+    padding: 5px 15px;
+    width: 100%;
+    color: white;
+    @include font(32px);
+    text-align: center;
+    text-transform: uppercase;
+  }
+  &:hover .card-title {
+    background: rgba(31, 174, 75, 1);
+  }
+
+//Callout
+}
+.callout {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  &.background-image {
+    background-size: cover;
+    &:before {
+      content: "";
+      background: rgba(0, 0, 0, .5);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  .callout-content {
+    position: relative;
+    z-index: 1;
+    padding: 150px 0;
+  }
+  h2 {
+    @include font(50px);
+  }
+
 // ----- LIST -----
-.primary article
-    ul
-        list-style-type: none
-        padding-left: 15px
+}
+.primary article {
+  ul {
+    list-style-type: none;
+    padding-left: 15px;
 
-        li:before
-            font-family: 'FontAwesome'
-            content: '\f00c'
-            margin: 0 5px 0 -15px
-
-        li
-            margin-bottom: 15px
-
-    ol li:before
-        content: none
+    li:before {
+      font-family: 'FontAwesome';
+      content: '\f00c';
+      margin: 0 5px 0 -15px;
+    }
+    li {
+      margin-bottom: 15px;
+    }
+  }
+  ol li:before {
+    content: none;
+  }
 
 
 // ----- TABLE -----
-article table
-    thead tr
-        background: $color-primary
-        color: $color-brightest
-
-    tr:nth-child(2n)
-        background: #e0e3e5
-
-    tr
-        background: #f1f1f1
-
-    tr td
-        padding: 5px 10px
-
+}
+article table {
+  thead tr {
+    background: $color-primary;
+    color: $color-brightest;
+  }
+  tr:nth-child(2n) {
+    background: #e0e3e5;
+  }
+  tr {
+    background: #f1f1f1;
+  }
+  tr td {
+    padding: 5px 10px;
+  }
 
 // Pagination
-.pagination .page-numbers
-    padding: 10px
-    background: $color-primary
-    color: $color-brightest
-    margin-right: 5px
-    border-radius: 4px
-
-.pagination .page-numbers.current
-    background: $color-secondary
-    color: $color-brightest
-    
-nav.post-navigation
-    +border(top, #ccc)
-    padding-top: 20px
-    height: 80px
-    
-nav .navigation
-    border-top: 1px solid $color-bright
-    padding-top: 25px
-
-nav .nav-links a
-    display: inline-block
-    color: $color-brightest
-    background: $color-secondary
-    padding: 2px 8px
-    +border-radius(4px)
-    &:first-child
-        float: left !important
-    &:last-child
-        float: right
-   
+}
+.pagination .page-numbers {
+  padding: 10px;
+  background: $color-primary;
+  color: $color-brightest;
+  margin-right: 5px;
+  border-radius: 4px;
+}
+.pagination .page-numbers.current {
+  background: $color-secondary;
+  color: $color-brightest;
+}
+// nav.post-navigation {
+//   @include border(top, #ccc);
+//   padding-top: 20px;
+//   height: 80px;
+// }
+// nav .navigation {
+//   border-top: 1px solid $color-bright;
+//   padding-top: 25px;
+// }
+// nav .nav-links a {
+//   display: inline-block;
+//   color: $color-brightest;
+//   background: $color-secondary;
+//   padding: 2px 8px;
+//   border-radius: 4px;
+//   &:first-child {
+//     float: left !important;
+//   }
+//   &:last-child {
+//     float: right;
+//   }
+// }
 
 /* ==========================================================================
-   ADVERTISING
-   ========================================================================== */
+  ADVERTISING
+  ========================================================================== */
+// .ad__leaderboard__block {
+//   display: flex;
+//   justify-content: center;
+//   padding: 20px;
+// }
+.ad {
+  margin: 0 auto;
+  background: #f1f1f1;
+  border: 1px solid #fff;
+  overflow: hidden;
+}
 
-.ad
-    margin: 0 auto
-    background: #f1f1f1
-    border: 1px solid #fff
-    overflow: hidden
+.ad:after {
+  content: "Advertise here";
+  @include font(13px);
+  text-align: center;
+  width: 100%;
+  display: block;
+}
 
+.ad.leaderboard:after {
+  line-height: 90px;
+}
+.ad.medrectangle:after {
+  line-height: 250px;
+}
+.leaderboard {
+  width: 728px;
+  height: 90px;
+}
 
-.ad:after
-    content: "Advertise here"
-    +font(13px)
-    text-align: center
-    width: 100%
-    display: block
-
-
-.ad.leaderboard:after 
-    line-height: 90px 
-
-.ad.medrectangle:after 
-    line-height: 250px 
-
-.leaderboard
-    width: 728px
-    height: 90px
-
-
-.medrectangle
-    width: 300px
-    height: 250px
+.medrectangle {
+  width: 300px;
+  height: 250px;
+}
 </xmp>
