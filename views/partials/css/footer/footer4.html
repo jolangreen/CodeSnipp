@@ -1,56 +1,63 @@
 <xmp>
-footer
-    background: $color-dark
-    padding-top: 20px
-    +font(13px)
-    color: $color-brightest
-
-    hr
-        border-bottom: 1px solid $color-medium
-        margin: 5px 0
-
-    .container .row
-        padding: 15px 0
-
-        h4
-            color: $color-brightest
-            +font(15px)
-            text-transform: uppercase
-
-        ul
-            padding-left: 0
-            padding-top: 5px
-
-            li
-                list-style: none
-                &:before
-                    margin-right: 4px
-                    content: '\f0da'
-                    font-family: 'FontAwesome'
-                    
-        a
-            color: $color-bright
-
-            &:hover
-                color: $color-secondary
-                text-decoration: none
-
-        .contact-info
-            padding-left: 20px
-            i.fa
-                float: left
-                margin-left: -20px
-                margin-top: 3px
-
-        form input[type="text"]
-            height: 34px
-            padding: 4px
-
-
-+breakpoint
-    footer .container
-        text-align: center
-
-        .pull-right
-            float: none !important
+footer {
+  padding-top: 100px;
+  .footer-top-wrapper {
+      gap: 30px;
+  }
+  .footer-top__content {
+      @include breakpoint('sm', 'up') {
+        margin-left: auto;
+        max-width: 400px;
+        padding-right: 100px;
+      }
+      .footer-top__content__title {
+        padding-left: 0;
+        font-size: $font-size-large;
+      }
+      @include breakpoint {
+        .footer-top__text {
+            margin: 0 auto 25px;
+        }
+      }
+  }
+  hr {
+      margin: 35px 0;
+  }
+  @include breakpoint('sm', 'up') {
+      .footer-top__nav {
+        flex-grow: 4;
+      }
+  }
+  @include breakpoint('xl', 'up') {
+      .footer-top__nav {
+        min-width: 200px;
+      }
+  }
+  .nav-menu {
+      list-style: none;
+      padding-left: 0;
+      .nav-menu__list-item {
+        font-size: $root-font-size;
+        white-space: nowrap;
+        padding: 10px;
+      }
+  }
+  .nav-menu__list-title {
+      font-size: $font-size-small;
+      font-weight: 600;
+      padding: 10px;
+      @include breakpoint('sm', 'up') {
+        margin-bottom: 20px;
+      }
+  }
+}
+/*______ COPYRIGHT _____*/
+.footer-bottom-wrapper {
+  @include breakpoint {
+      flex-direction: column-reverse;
+  }
+  .footer-bottom__copyright {
+      font-size: $font-size-x-small;
+  }
+}
 </xmp>

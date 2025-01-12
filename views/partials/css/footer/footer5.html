@@ -1,0 +1,99 @@
+<xmp>
+footer {
+   padding-top: 100px;
+   .footer-top-wrapper {
+      gap: 30px;
+   }
+   .footer-top__content {
+      @include breakpoint('sm', 'up') {
+         margin-left: auto;
+         max-width: 400px;
+      }
+      .footer-top__content__title {
+         padding-left: 0;
+      }
+      @include breakpoint {
+         .footer-top__text {
+            margin: 0 auto 25px;
+         }
+      }
+   }
+   hr {
+      margin: 35px 0;
+   }
+   @include breakpoint('sm', 'up') {
+      .footer-top__nav {
+         flex-grow: 4;
+      }
+   }
+   @include breakpoint('xl', 'up') {
+      .footer-top__nav {
+         min-width: 200px;
+      }
+   }
+   .nav-menu {
+      list-style: none;
+      padding-left: 0;
+      .nav-menu__list-item {
+         font-size: $root-font-size;
+         white-space: nowrap;
+         padding: 10px;
+      }
+      .nav-menu__link--icon {
+         display: block;
+         position: relative;
+         padding-left: 30px;
+         @include breakpoint('sm', 'up') {
+            .fa {
+               position: absolute;
+               left: 0;
+               top: 0px;
+               font-size: 22px;
+            }
+         }
+      }
+   }
+   .nav-menu__list-title, .footer-top__content__title {
+      font-size: $font-size-small;
+      font-weight: 600;
+      padding: 10px;
+      @include breakpoint('sm', 'up') {
+         margin-bottom: 20px;
+      }
+   }
+   .footer-top__form {
+      @media (max-width: 900px) and (min-width: 767px) {
+         display: block;
+         .footer-top__form__input {
+            width: 90%;
+            margin-bottom: 15px;
+         }
+      }
+      .footer-top__form__input {
+         margin-right: 15px;
+         border: 1px solid $color-primary;
+         padding-top: 0;
+         padding-bottom: 0;
+      }
+      .footer-top__form__input, .footer-top__form__btn {
+         height: 50px;
+      }
+   }
+}
+/*______ COPYRIGHT _____*/
+.footer-bottom-wrapper {
+   @include breakpoint {
+      flex-direction: column-reverse;
+   }
+   .footer-bottom__copyright {
+      font-size: $font-size-x-small;
+   }
+   .footer-social {
+      gap: 10px;
+      @include breakpoint {
+         display: flex;
+         justify-content: center;
+      }
+   }
+}
+</xmp>

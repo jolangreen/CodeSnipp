@@ -1,35 +1,77 @@
 <xmp>
-footer
-    background: $color-darkest
-
-    hr
-        border-bottom: 1px solid $color-dark
-        margin: 5px 0
-
-    .container .row
-        padding: 20px 0
-
-        ul
-            padding-left: 0
-            padding-top: 5px
-
-            li
-                list-style: none
-                &:first-child
-                    color: $color-brightest
-                    +font(18px)
-                a
-                    color: $color-bright
-
-                    &:hover
-                        color: $color-primary
-                        text-decoration: none
-
-
-+breakpoint
-    footer .container
-        text-align: center
-
-        .pull-right
-            float: none !important
+footer {
+  padding-top: 100px;
+  .footer-top-wrapper {
+    gap: 30px;
+  }
+  .footer-top__content {
+    @include breakpoint('sm', 'up') {
+      margin-left: auto;
+      max-width: 400px;
+      padding-right: 100px;
+    }
+    .footer-top__content__title {
+      padding-left: 0;
+      font-size: $font-size-large;
+    }
+    @include breakpoint {
+      .footer-top__text {
+          margin: 0 auto 25px;
+      }
+    }
+  }
+  hr {
+    margin: 35px 0 20px;
+  }
+  @include breakpoint('sm', 'up') {
+    .footer-top__nav {
+      flex-grow: 4;
+    }
+  }
+  @include breakpoint('xl', 'up') {
+    .footer-top__nav {
+      min-width: 200px;
+    }
+  }
+  .nav-menu {
+    list-style: none;
+    padding-left: 0;
+    .nav-menu__list-item {
+      font-size: $root-font-size;
+      white-space: nowrap;
+      padding: 10px;
+    }
+  }
+  .nav-menu__list-title {
+    font-size: $font-size-small;
+    font-weight: 600;
+    padding: 10px;
+    @include breakpoint('sm', 'up') {
+      margin-bottom: 20px;
+    }
+  }
+  .footer-social {
+    justify-content: left;
+  }
+}
+/*______ COPYRIGHT _____*/
+.footer-bottom-wrapper {
+  @include breakpoint('sm', 'up') {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav-menu {
+    display: flex;
+    @include breakpoint {
+      margin-bottom: 15px;
+    }
+    .nav-menu__list-item {
+      font-size: $font-size-x-small;
+    }
+  }
+  .footer-bottom__copyright {
+    font-size: $font-size-x-small;
+  }
+}
 </xmp>
