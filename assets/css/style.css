@@ -18,3 +18,11 @@
 
 .color-setting label { width: 130px; }
 .color-setting input[type="text"] { width: 80px; }
+
+.image-block { 
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+    padding: 15px;
+}

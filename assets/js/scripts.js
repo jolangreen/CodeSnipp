@@ -28013,33 +28013,39 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
     $scope.headeritems = [
         {
             title: 'Logo Left - Nav Right',
-            img: 'assets/images/header/header1.jpg',
+            img: 'assets/images/header/header1.jpg?123',
             html: 'views/partials/html/header/header1.html',
             css: 'views/partials/css/header/header1.html'
         },
         {
             title: 'Logo & Social - Nav Full',
-            img: 'assets/images/header/header2.jpg',
+            img: 'assets/images/header/header2.jpg?123',
             html: 'views/partials/html/header/header2.html',
             css: 'views/partials/css/header/header2.html'
         },
         {
             title: 'Logo Top - Nav & Social',
-            img: 'assets/images/header/header3.jpg',
+            img: 'assets/images/header/header3.jpg?123',
             html: 'views/partials/html/header/header3.html',
             css: 'views/partials/css/header/header3.html'
         },
         {
             title: 'Logo Top - Nav Full',
-            img: 'assets/images/header/header4.jpg',
+            img: 'assets/images/header/header4.jpg?123',
             html: 'views/partials/html/header/header4.html',
             css: 'views/partials/css/header/header4.html'
         },
         {
-            title: 'Fifth Item',
-            img: 'assets/images/header/header5.jpg',
+            title: 'Nav Full Center',
+            img: 'assets/images/header/header5.jpg?123',
             html: 'views/partials/html/header/header5.html',
             css: 'views/partials/css/header/header5.html'
+        },
+        {
+          title: 'Nav - Center Logo - Full Nav',
+          img: 'assets/images/header/header6.jpg?123',
+          html: 'views/partials/html/header/header6.html',
+          css: 'views/partials/css/header/header6.html'
         },
     ];
 
@@ -28057,17 +28063,23 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             css: 'views/partials/css/footer/footer2.html'
         },
         {
-            title: '3 column list',
+            title: 'Logo + 3 Column List',
             img: 'assets/images/footer/footer3.jpg',
             html: 'views/partials/html/footer/footer3.html',
             css: 'views/partials/css/footer/footer3.html'
         },
         {
-            title: '4 column sections',
+            title: 'Callout + 3 Column List',
             img: 'assets/images/footer/footer4.jpg',
             html: 'views/partials/html/footer/footer4.html',
             css: 'views/partials/css/footer/footer4.html'
         },
+        {
+          title: '4 Column with Form',
+          img: 'assets/images/footer/footer5.jpg',
+          html: 'views/partials/html/footer/footer5.html',
+          css: 'views/partials/css/footer/footer5.html'
+      },
     ];
 
     $scope.banneritems = [
