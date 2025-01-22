@@ -28102,8 +28102,8 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             css: 'views/partials/css/banner/banner3.html'
         },
         {
-            title: 'Fading Banner',
-            img: 'assets/images/banner/banner1.jpg',
+            title: 'Hero + Contact Form',
+            img: 'assets/images/banner/banner4.jpg',
             html: 'views/partials/html/banner/banner4.html',
             css: 'views/partials/css/banner/banner4.html'
         },
@@ -28111,90 +28111,104 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
 
     $scope.bodyitems = [
         {
-            title: 'Icon & Content',
-            img: 'assets/images/body/cta1.jpg',
-            html: 'views/partials/html/body/cta1.html',
+            title: '3 Col Centered',
+            img: 'assets/images/body/3-col-centered.jpg',
+            html: 'views/partials/html/body/3-col-centered.html',
             css: null,
             background: false
         },
         {
-            title: 'Image With Text Overlay',
-            img: 'assets/images/body/cta2.jpg',
-            html: 'views/partials/html/body/cta2.html',
-            css: 'views/partials/css/body/cta2.html'
+          title: '3 Col Image Overlay',
+          img: 'assets/images/body/3-col-image-overlay.jpg',
+          html: 'views/partials/html/body/3-col-image-overlay.html',
+          css: 'views/partials/css/body/3-col-image-overlay.html',
+          background: false
         },
         {
-            title: 'Image, Title & Text',
-            img: 'assets/images/body/cta3.jpg',
-            html: 'views/partials/html/body/cta3.html',
-            css: null
+          title: '3 Col Articles',
+          img: 'assets/images/body/3-col-articles.jpg',
+          html: 'views/partials/html/body/3-col-articles.html',
+          css: null,
+          background: false
         },
         {
-            title: 'Gallery',
-            img: 'assets/images/body/gallery.jpg',
-            html: 'views/partials/html/body/gallery.html',
-            css: 'views/partials/css/body/gallery.html'
+          title: '3 Col Left Image',
+          img: 'assets/images/body/3-col-left-image.jpg',
+          html: 'views/partials/html/body/3-col-left-image.html',
+          css: null,
+          background: false
         },
         {
-            title: 'Content Left - Sidebar Right',
-            img: 'assets/images/body/sidebar1.jpg',
-            html: 'views/partials/html/body/sidebar1.html',
-            css: null
+          title: 'Article 50/50 - Right Image',
+          img: 'assets/images/body/article-50-50-right-image.jpg',
+          html: 'views/partials/html/body/article-50-50-right-image.html',
+          css: null,
+          background: false
         },
         {
-            title: 'Content Right - Sidebar Left',
-            img: 'assets/images/body/sidebar2.jpg',
-            html: 'views/partials/html/body/sidebar2.html',
-            css: null
+          title: 'Article 50/50 - Left Image',
+          img: 'assets/images/body/article-50-50-left-image.jpg',
+          html: 'views/partials/html/body/article-50-50-left-image.html',
+          css: null,
+          background: false
         },
         {
-            title: 'Media - Icons & Content List',
-            img: 'assets/images/body/media-list.jpg',
-            html: 'views/partials/html/body/services.html',
-            css: null
+          title: 'Article 70/30 - Right Image',
+          img: 'assets/images/body/article-70-30-right-image.jpg',
+          html: 'views/partials/html/body/article-70-30-right-image.html',
+          css: null,
+          background: false
         },
         {
-            title: 'Content & Image Left',
-            img: 'assets/images/body/content-image-left.jpg',
-            html: 'views/partials/html/body/content-image-left.html',
-            css: null
+          title: 'Article 30/70 - Left Image',
+          img: 'assets/images/body/article-30-70-left-image.jpg',
+          html: 'views/partials/html/body/article-30-70-left-image.html',
+          css: null,
+          background: false
         },
         {
-            title: 'Content & Image Right',
-            img: 'assets/images/body/content-image-right.jpg',
-            html: 'views/partials/html/body/content-image-right.html',
-            css: null
+          title: 'Article 70/30 - Right Sidebar',
+          img: 'assets/images/body/article-70-30-right-sidebar.jpg',
+          html: 'views/partials/html/body/article-70-30-right-sidebar.html',
+          css: 'views/partials/css/body/article-70-30-right-sidebar.html',
+          background: false
         },
         {
-            title: 'Background Image - Center',
-            img: 'assets/images/body/center-img.jpg',
-            html: 'views/partials/html/body/callout.html',
-            css: 'views/partials/css/body/callout.html'
+          title: 'Article 30/70 - Left Sidebar',
+          img: 'assets/images/body/article-30-70-left-sidebar.jpg',
+          html: 'views/partials/html/body/article-30-70-left-sidebar.html',
+          css: 'views/partials/css/body/article-30-70-left-sidebar.html',
+          background: false
+        },
+
+        {
+          title: 'Centered Callout',
+          img: 'assets/images/body/centered-callout.jpg',
+          html: 'views/partials/html/body/centered-callout.html',
+          css: null,
+          background: 'bg-dark'
         },
         {
-            title: 'Callout',
-            img: 'assets/images/body/callout.jpg',
-            html: 'views/partials/html/body/callout2.html',
-            css: 'views/partials/css/body/callout.html'
+          title: 'Logos Social Proof',
+          img: 'assets/images/body/logos-social-proof.jpg',
+          html: 'views/partials/html/body/logos-social-proof.html',
+          css: null,
+          background: false
         },
         {
-            title: 'Background Left',
-            img: 'assets/images/body/background-left.jpg',
-            html: 'views/partials/html/body/background-left.html',
-            css: null
+          title: '3 Col - 2 Col Box',
+          img: 'assets/images/body/3-col---2-col-box.jpg',
+          html: 'views/partials/html/body/3-col---2-col-box.html',
+          css: 'views/partials/css/body/3-col---2-col-box.html',
+          background: false
         },
         {
-            title: 'Background Right',
-            img: 'assets/images/body/background-right.jpg',
-            html: 'views/partials/html/body/background-right.html',
-            css: null
-        },
-        {
-            title: 'Form Left - Content Right',
-            img: 'assets/images/body/contact.jpg',
-            html: 'views/partials/html/body/contact.html',
-            css: null
-        },
+          title: '3 Col - Box Text Centered',
+          img: 'assets/images/body/3-col---box-text-centered.jpg',
+          html: 'views/partials/html/body/3-col---box-text-centered.html',
+          css: null,
+          background: false
+        }
     ];
     
 
