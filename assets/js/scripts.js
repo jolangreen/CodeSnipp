@@ -28009,7 +28009,7 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         },
     ];
 
-
+    
     $scope.headeritems = [
         {
             title: 'Logo Left - Nav Right',
@@ -28082,30 +28082,30 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
       },
     ];
 
-    $scope.banneritems = [
+    $scope.heroitems = [
         {
             title: 'Text Center',
-            img: 'assets/images/banner/banner1.jpg',
-            html: 'views/partials/html/banner/banner1.html',
-            css: 'views/partials/css/banner/banner1.html'
+            img: 'assets/images/hero/hero1.jpg',
+            html: 'views/partials/html/hero/hero1.html',
+            css: 'views/partials/css/hero/hero1.html'
         },
         {
             title: 'Text Left - Img Right',
-            img: 'assets/images/banner/banner2.jpg',
-            html: 'views/partials/html/banner/banner2.html',
-            css: 'views/partials/css/banner/banner1.html'
+            img: 'assets/images/hero/hero2.jpg',
+            html: 'views/partials/html/hero/hero2.html',
+            css: 'views/partials/css/hero/hero1.html'
         },
         {
             title: 'Text Left - Form Right',
-            img: 'assets/images/banner/banner3.jpg',
-            html: 'views/partials/html/banner/banner3.html',
-            css: 'views/partials/css/banner/banner3.html'
+            img: 'assets/images/hero/hero3.jpg',
+            html: 'views/partials/html/hero/hero3.html',
+            css: 'views/partials/css/hero/hero3.html'
         },
         {
             title: 'Hero + Contact Form',
-            img: 'assets/images/banner/banner4.jpg',
-            html: 'views/partials/html/banner/banner4.html',
-            css: 'views/partials/css/banner/banner4.html'
+            img: 'assets/images/hero/hero4.jpg',
+            html: 'views/partials/html/hero/hero4.html',
+            css: 'views/partials/css/hero/hero4.html'
         },
     ];
 
@@ -28114,114 +28114,100 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
             title: '3 Col Centered',
             img: 'assets/images/body/3-col-centered.jpg',
             html: 'views/partials/html/body/3-col-centered.html',
-            css: null,
-            background: false
+            css: null
         },
         {
           title: '3 Col Image Overlay',
           img: 'assets/images/body/3-col-image-overlay.jpg',
           html: 'views/partials/html/body/3-col-image-overlay.html',
-          css: 'views/partials/css/body/3-col-image-overlay.html',
-          background: false
+          css: 'views/partials/css/body/3-col-image-overlay.html'
         },
         {
           title: '3 Col Articles',
           img: 'assets/images/body/3-col-articles.jpg',
           html: 'views/partials/html/body/3-col-articles.html',
-          css: null,
-          background: false
+          css: null
         },
         {
           title: '3 Col Left Image',
           img: 'assets/images/body/3-col-left-image.jpg',
           html: 'views/partials/html/body/3-col-left-image.html',
-          css: null,
-          background: false
+          css: null
         },
         {
           title: 'Article 50/50 - Right Image',
           img: 'assets/images/body/article-50-50-right-image.jpg',
           html: 'views/partials/html/body/article-50-50-right-image.html',
-          css: null,
-          background: false
+          css: null
         },
         {
           title: 'Article 50/50 - Left Image',
           img: 'assets/images/body/article-50-50-left-image.jpg',
           html: 'views/partials/html/body/article-50-50-left-image.html',
-          css: null,
-          background: false
+          css: null
         },
         {
           title: 'Article 70/30 - Right Image',
           img: 'assets/images/body/article-70-30-right-image.jpg',
           html: 'views/partials/html/body/article-70-30-right-image.html',
-          css: null,
-          background: false
+          css: null
         },
         {
           title: 'Article 30/70 - Left Image',
           img: 'assets/images/body/article-30-70-left-image.jpg',
           html: 'views/partials/html/body/article-30-70-left-image.html',
-          css: null,
-          background: false
+          css: null
         },
         {
           title: 'Article 70/30 - Right Sidebar',
           img: 'assets/images/body/article-70-30-right-sidebar.jpg',
           html: 'views/partials/html/body/article-70-30-right-sidebar.html',
-          css: 'views/partials/css/body/article-70-30-right-sidebar.html',
-          background: false
+          css: 'views/partials/css/body/article-70-30-right-sidebar.html'
         },
         {
           title: 'Article 30/70 - Left Sidebar',
           img: 'assets/images/body/article-30-70-left-sidebar.jpg',
           html: 'views/partials/html/body/article-30-70-left-sidebar.html',
-          css: 'views/partials/css/body/article-30-70-left-sidebar.html',
-          background: false
+          css: 'views/partials/css/body/article-30-70-left-sidebar.html'
         },
-
         {
           title: 'Centered Callout',
           img: 'assets/images/body/centered-callout.jpg',
           html: 'views/partials/html/body/centered-callout.html',
-          css: null,
-          background: 'bg-dark'
+          css: null
         },
         {
           title: 'Logos Social Proof',
           img: 'assets/images/body/logos-social-proof.jpg',
           html: 'views/partials/html/body/logos-social-proof.html',
-          css: null,
-          background: false
+          css: null
         },
         {
           title: '3 Col - 2 Col Box',
           img: 'assets/images/body/3-col---2-col-box.jpg',
           html: 'views/partials/html/body/3-col---2-col-box.html',
-          css: 'views/partials/css/body/3-col---2-col-box.html',
-          background: false
+          css: 'views/partials/css/body/3-col---2-col-box.html'
         },
         {
           title: '3 Col - Box Text Centered',
           img: 'assets/images/body/3-col---box-text-centered.jpg',
           html: 'views/partials/html/body/3-col---box-text-centered.html',
-          css: null,
-          background: false
+          css: null
         }
     ];
     
 
 
     //Select Items
+    // Create an empty object called 'selected'. This object is what will be outputted, so I it will have the selected header, footer and body items.
     $scope.selected = {};
 
-    $scope.selected.bodyitemx = [ ];
+    $scope.selected.bodysection = [ ];
 
 
     $scope.select = function(item, type) {
         if(type == 'body') {
-          $scope.selected.bodyitemx.push(item);
+          $scope.selected.bodysection.push(item);
         } else {
           $scope.selected[type]=item;
         };
@@ -28250,11 +28236,11 @@ myApp.controller('HTMLController', function ($scope, $modal, $log, FileSaver, Bl
         var data6 = new Blob([CSSBaseContent], { type: 'text/plain;charset=utf-8' });
         // Need to take these files and put it on the server in 'preview' folder
         FileSaver.saveAs(data, 'index.html');
-        FileSaver.saveAs(data2, '_layout.sass');
-        FileSaver.saveAs(data3, '_home.sass');
-        FileSaver.saveAs(data4, '_modules.sass');
+        FileSaver.saveAs(data2, '_layout.scss');
+        FileSaver.saveAs(data3, '_home.scss');
+        FileSaver.saveAs(data4, '_modules.scss');
         FileSaver.saveAs(data5, '_variables.scss');
-        FileSaver.saveAs(data6, '_base.sass');
+        FileSaver.saveAs(data6, '_base.scss');
         
         //var data = new Blob([allContent], { type: 'aplication/zip' });
         //FileSaver.saveAs(data, 'files.zip');

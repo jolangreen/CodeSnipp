@@ -1,19 +1,16 @@
 <xmp>
 <!doctype html>
 <html lang="en-US">
-
 <head>
 <meta charset="UTF-8" />
 <link rel="icon" href="favicon.ico" type="image/x-icon" />
 <title>UntitledCompany</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0">
 
-<link rel="stylesheet" href="css/min/bootstrap.min.css" />
-<link rel="stylesheet" href="css/min/font-awesome.min.css" />
-<link href="style.css" type="text/css" rel="stylesheet"  />
+<!-- <link rel="stylesheet" href="css/min/font-awesome.min.css" /> -->
+<link href="css/style.css" type="text/css" rel="stylesheet"  />
 
 </head>
-
 <body class="home">
 
 <!-- Header
@@ -23,11 +20,10 @@
 <!-- Main Content
 ================================================== -->
 <main id="main">
-<!-- begin BANNER -->
-</xmp><div ng-include="selected.banner.html"></div><xmp>
-<!-- end BANNER -->
-</xmp><div ng-include="selected.cta.html"></div><xmp>
-</xmp><div ng-repeat="body in selected.bodyitemx track by $index"><div ng-include="body.html"></div></div><xmp>
+<!-- begin Hero -->
+</xmp><div ng-include="selected.hero.html"></div><xmp>
+<!-- end Hero -->
+</xmp><div ng-repeat="body in selected.bodysection track by $index"><div ng-include="body.html"></div></div><xmp>
 </main>
 <div class="clear"></div>
 

@@ -1,5 +1,3 @@
-
-
 <div class="container">
 
     <div class="row">
@@ -34,7 +32,7 @@
                 <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.header.title }}</span></div>
             </h4>
             <div class="row">
-                <div class="col-md-4" ng-repeat="headeritem in headeritems" ng-class="{active: selected.header == headeritem}">
+                <div class="col-md-4" ng-repeat="headeritem in headeritems track by $index" ng-class="{active: selected.header == headeritem}">
                     <div class="image-block"><img src="{{headeritem.img}}" alt=""></div>
                     <h3>{{headeritem.title}}</h3>
                     <a href="" class="btn btn-primary" ng-click="select(headeritem, 'header')">Select</a>
@@ -57,33 +55,56 @@
         <tab heading="Hero">
             <br>
             <h4>
-                <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.banner.title }}</span></div>
+                <div class="alert alert-info">Selected Item: <span class="label label-success">{{ selected.hero.title }}</span></div>
             </h4>
             <div class="row">
-                <div class="col-md-4" ng-repeat="banneritem in banneritems" ng-class="{active: selected.banner == banneritem}">
-                    <div class="image-block"><img src="{{banneritem.img}}" alt=""></div>
-                    <h3>{{banneritem.title}}</h3>
-                    <a href="" class="btn btn-primary" ng-click="select(banneritem, 'banner')">Select</a>
+                <div class="col-md-4" ng-repeat="heroitem in heroitems" ng-class="{active: selected.hero == heroitem}">
+                    <div class="image-block"><img src="{{heroitem.img}}" alt=""></div>
+                    <h3>{{heroitem.title}}</h3>
+                    <a href="" class="btn btn-primary" ng-click="select(heroitem, 'hero')">Select</a>
                 </div>
             </div>
         </tab>
         <tab heading="Body">
             <br>
             <h4>
-                <div class="alert alert-info">Selected Item: <span class="label label-success" ng-repeat="body in selected.bodyitemx track by $index">{{body.title}}</span></div>
+                <div class="alert alert-info">Selected Items: <span class="label label-success" ng-repeat="body in selected.bodysection track by $index">{{body.title}}</span></div>
             </h4>
             <div class="row">
-                <div class="col-md-4" ng-repeat="bodyitem in bodyitems track by $index" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodyitemx == bodyitem}">
+                <div class="col-md-4" ng-repeat="bodyitem in bodyitems track by $index" selection-model selection-model-mode="multiple-additive" selection-model-selected-class="active" ng-class="{active: selected.bodysection == bodyitem}">
                     <div class="image-block"><img src="{{bodyitem.img}}" alt=""></div>
                     <h3>{{bodyitem.title}}</h3>
-                    <!-- <a ng-click="selected.value = $index">A{{$index}}</a> -->
-                    <div><input type="checkbox" ng-model="bodyitem.background" ng-true-value="background-class" ng-false-value=""> Background Color</div>
                     <a href="" class="btn btn-primary" ng-click="select(bodyitem, 'body', $index)">Select</a>
-                    {{bodyitem.background}}
                 </div>
             </div>
         </tab>
       </tabset>
 
     </div><!-- .row -->
+</div>
+
+
+<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Section Modifier Settings</h4>
+      </div>
+      <div class="modal-body">
+        <p><strong>Select settings:</strong></p>
+        <div><input type="checkbox" ng-model="bodyitem.classes" ng-true-value="background-class" ng-false-value=""> background-primary</div>
+        <div><input type="checkbox" ng-model="bodyitem.classes" ng-true-value="intro-class" ng-false-value=""> intro-text</div>
+        <div><input type="checkbox" ng-model="bodyitem.classes" ng-true-value="background-secondary" ng-false-value=""> background-secondary</div>
+        <!-- use $scope.select - each item you click adds to bodysection.classes array -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
 </div>
